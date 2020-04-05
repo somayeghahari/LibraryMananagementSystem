@@ -7,9 +7,9 @@
 
 #include "Book.h"
 
+
 book::book() {
 	id = -1;
-	++BOOK_COUNT;
 	name = " ";
 	authorName = " ";
 	borrowed = false;
@@ -328,4 +328,8 @@ void book::createLine(std::string &line) {
 //		line = std::to_string(id) + "," + name + "," + authorName + "," ;
 		line = std::to_string(id) + "," + name + "," + authorName  ;
 	}
+}
+
+void book::addBOOK_COUNT(){
+	++BOOK_COUNT;
 }

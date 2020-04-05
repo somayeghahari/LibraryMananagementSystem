@@ -139,6 +139,7 @@ public:
 	 * @param line: line that is supposed to write to file
 	 */
 	void createLine( std::string& line);
+	void addBOOK_COUNT();
 
 private:
 	/**

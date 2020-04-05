@@ -131,6 +131,7 @@ void readBooksFromFile(){
 				getline(inFileBook, tStr);
 				if(tStr.size()>1 && tStr.at(0)!='#'){
 	//				cout << tStr ;
+					bk->addBOOK_COUNT();
 					bk->parseLine(tStr);
 					books.addBook(bk);
 				}
