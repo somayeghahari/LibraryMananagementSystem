@@ -1,0 +1,28 @@
+<map id="menuStudent" name="menuStudent">
+<area shape="rect" id="node2" href="$class_student_handler.html#ad54072af22b0b84e677af69426ed0bff" title="StudentHandler::findStudentId" alt="" coords="154,233,351,260"/>
+<area shape="rect" id="node5" href="$classstudent.html#a718b1fdd02dd1ed06110f9e0e7ec7720" title="student::getId" alt="" coords="667,259,769,285"/>
+<area shape="rect" id="node6" href="$class_book_handler.html#ae82abc7349e19e59cd6f3cb23c7928fa" title="BookHandler::findBookId" alt="" coords="856,183,1023,209"/>
+<area shape="rect" id="node9" href="$classbook.html#a68bc47d79edd93594d50f720be2653f6" title="book::borrowBook" alt="" coords="427,487,554,513"/>
+<area shape="rect" id="node10" href="$classqueue_l_l.html#af46d9d07b7528da834c2c37d752c29f5" title="queueLL::find" alt="" coords="668,537,768,564"/>
+<area shape="rect" id="node13" href="$classstudent.html#af02c927727b890c189a4641f01185bcc" title="student::addBorrowedBook" alt="" coords="401,588,580,615"/>
+<area shape="rect" id="node14" href="$classstudent.html#a27120d590ee93cc80c5b9d72d91a2eb3" title="student::getBorrowedBooks" alt="" coords="161,639,344,665"/>
+<area shape="rect" id="node15" href="$classbook.html#af11d02d9964b788986dc8e26d1cdf373" title="book::returnBook" alt="" coords="192,385,313,412"/>
+<area shape="rect" id="node17" href="$classstudent.html#a5387f0131233065383ca141ddec50de6" title="student::removeBorrowedBook\lAtindex" alt="" coords="152,690,353,731"/>
+<area shape="rect" id="node19" href="$class_book_handler.html#ac6e2d4211b55e636348daaa9253a2d12" title="BookHandler::print" alt="" coords="1071,411,1201,437"/>
+<area shape="rect" id="node20" href="$_library_mananagement_system_8cpp.html#abbfe09f5b391ad6e6bdb7b48338a54c6" title="writeBooksToFile" alt="" coords="429,31,552,57"/>
+<area shape="rect" id="node24" href="$_library_mananagement_system_8cpp.html#a4553a1ae7185f7dfe1cf9d15b38ad35c" title="writeStudentsToFile" alt="" coords="183,107,322,133"/>
+<area shape="rect" id="node3" href="$class_binary_tree.html#a9ee0cf09781cf2ecc471aacc61848dde" title="BinaryTree::getRoot" alt="" coords="649,132,787,159"/>
+<area shape="rect" id="node4" href="$class_student_handler.html#a366b1628971d8b8ae437a87978e26e8a" title="StudentHandler::find" alt="" coords="420,233,561,260"/>
+<area shape="rect" id="node7" href="$classqueue_l_l.html#ae9a479b9463f51c5148dd80b68335d32" title="queueLL::nodeList" alt="" coords="1072,183,1200,209"/>
+<area shape="rect" id="node8" href="$classqueue_l_l.html#a8969feebcb563f0b489bc112422b9563" title="queueLL::getSize" alt="" coords="1249,183,1372,209"/>
+<area shape="rect" id="node11" href="$classqueue_l_l.html#adcbcc26433da2c9d17b6cf0802d1d7d2" title="queueLL::add" alt="" coords="668,588,768,615"/>
+<area shape="rect" id="node12" href="$classbook.html#a61624bab2476a61fb2f27ebf7c8976e3" title="book::setDueTime" alt="" coords="653,487,783,513"/>
+<area shape="rect" id="node16" href="$classqueue_l_l.html#a4204a9db973b69be5824ca2495130b40" title="queueLL::remove" alt="" coords="429,385,552,412"/>
+<area shape="rect" id="node18" href="$classqueue_l_l.html#abe3f175ee8c25c55d18650c5b13297b1" title="queueLL::removeAtIndex" alt="" coords="407,697,574,724"/>
+<area shape="rect" id="node21" href="$class_book_handler.html#a6794f0f693ff3048df64a5b254c183af" title="BookHandler::printFile" alt="" coords="864,107,1015,133"/>
+<area shape="rect" id="node22" href="$classbook.html#aea835c54459ec0a4d29d42f2f6f7858d" title="book::createLine" alt="" coords="1077,31,1195,57"/>
+<area shape="rect" id="node23" href="$classqueue_l_l.html#a6c8873be0f08b3b2e83a24469fbfaa5d" title="queueLL::atIndex" alt="" coords="1249,5,1372,32"/>
+<area shape="rect" id="node25" href="$class_student_handler.html#a8049bb821d2a0a951600ab79c6ee4e27" title="StudentHandler::printFile" alt="" coords="407,81,574,108"/>
+<area shape="rect" id="node26" href="$class_student_handler.html#a61f541e2aa02759a3213a9bceecf125c" title="StudentHandler::inorderFile" alt="" coords="628,31,808,57"/>
+<area shape="rect" id="node27" href="$classstudent.html#a4bc363a59fc8b14d81e8e5e0d2326444" title="student::createLine" alt="" coords="873,31,1006,57"/>
+</map>

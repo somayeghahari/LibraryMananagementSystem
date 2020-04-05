@@ -1,0 +1,14 @@
+<map id="queueLL::add" name="queueLL::add">
+<area shape="rect" id="node2" href="$class_binary_tree.html#a69ae782d438253d40cbd194737feca17" title="BinaryTree\&lt; student\l \&gt;::insertNode" alt="" coords="161,5,301,47"/>
+<area shape="rect" id="node3" href="$classbook.html#a68bc47d79edd93594d50f720be2653f6" title="book::borrowBook" alt="" coords="168,71,295,98"/>
+<area shape="rect" id="node7" href="$classbook.html#acf51be6cb1a1e98d461144e134583c8f" title="book::parseLine" alt="" coords="174,223,289,250"/>
+<area shape="rect" id="node9" href="$classstudent.html#a73c407020ea392b45dc9ff9babc0850b" title="student::parseLine" alt="" coords="382,173,511,199"/>
+<area shape="rect" id="node11" href="$class_book_handler.html#a29517e8c55796a94f29c48d6971e9f1d" title="BookHandler::addBook" alt="" coords="153,274,309,301"/>
+<area shape="rect" id="node13" href="$classstudent.html#af02c927727b890c189a4641f01185bcc" title="student::addBorrowedBook" alt="" coords="357,122,536,149"/>
+<area shape="rect" id="node4" href="$classbook.html#af11d02d9964b788986dc8e26d1cdf373" title="book::returnBook" alt="" coords="386,21,507,47"/>
+<area shape="rect" id="node5" href="$_library_mananagement_system_8cpp.html#a496c74d9e9a86d627304d79618738c57" title="menuStudent" alt="" coords="610,97,709,123"/>
+<area shape="rect" id="node6" href="$_library_mananagement_system_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="783,198,833,225"/>
+<area shape="rect" id="node8" href="$_library_mananagement_system_8cpp.html#a1489a19670bb87989d92fa0bc667d6f4" title="readBooksFromFile" alt="" coords="379,223,514,250"/>
+<area shape="rect" id="node10" href="$_library_mananagement_system_8cpp.html#a5d29f499bef3936e914ba9b9bd33c52c" title="readStudentsFromFile" alt="" coords="584,173,735,199"/>
+<area shape="rect" id="node12" href="$_library_mananagement_system_8cpp.html#a16202881086f36cce6f9d7878b3bb1f9" title="menuAdmin" alt="" coords="614,274,705,301"/>
+</map>

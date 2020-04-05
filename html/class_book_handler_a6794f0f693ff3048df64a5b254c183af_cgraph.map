@@ -1,0 +1,6 @@
+<map id="BookHandler::printFile" name="BookHandler::printFile">
+<area shape="rect" id="node2" href="$classqueue_l_l.html#ae9a479b9463f51c5148dd80b68335d32" title="queueLL::nodeList" alt="" coords="204,5,332,32"/>
+<area shape="rect" id="node3" href="$classqueue_l_l.html#a8969feebcb563f0b489bc112422b9563" title="queueLL::getSize" alt="" coords="380,56,503,83"/>
+<area shape="rect" id="node4" href="$classbook.html#aea835c54459ec0a4d29d42f2f6f7858d" title="book::createLine" alt="" coords="209,107,327,133"/>
+<area shape="rect" id="node5" href="$classqueue_l_l.html#a6c8873be0f08b3b2e83a24469fbfaa5d" title="queueLL::atIndex" alt="" coords="380,107,503,133"/>
+</map>

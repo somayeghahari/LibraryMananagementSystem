@@ -1,0 +1,6 @@
+<map id="book::setDueTime" name="book::setDueTime">
+<area shape="rect" id="node2" href="$classbook.html#a68bc47d79edd93594d50f720be2653f6" title="book::borrowBook" alt="" coords="183,31,309,57"/>
+<area shape="rect" id="node3" href="$classbook.html#af11d02d9964b788986dc8e26d1cdf373" title="book::returnBook" alt="" coords="357,5,479,32"/>
+<area shape="rect" id="node4" href="$_library_mananagement_system_8cpp.html#a496c74d9e9a86d627304d79618738c57" title="menuStudent" alt="" coords="527,31,625,57"/>
+<area shape="rect" id="node5" href="$_library_mananagement_system_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="673,31,724,57"/>
+</map>

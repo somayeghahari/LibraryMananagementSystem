@@ -1,0 +1,8 @@
+<map id="book::returnBook" name="book::returnBook">
+<area shape="rect" id="node2" href="$classqueue_l_l.html#a8969feebcb563f0b489bc112422b9563" title="queueLL::getSize" alt="" coords="177,5,299,32"/>
+<area shape="rect" id="node3" href="$classqueue_l_l.html#a4204a9db973b69be5824ca2495130b40" title="queueLL::remove" alt="" coords="177,56,299,83"/>
+<area shape="rect" id="node4" href="$classbook.html#a68bc47d79edd93594d50f720be2653f6" title="book::borrowBook" alt="" coords="175,107,301,133"/>
+<area shape="rect" id="node5" href="$classqueue_l_l.html#af46d9d07b7528da834c2c37d752c29f5" title="queueLL::find" alt="" coords="364,56,464,83"/>
+<area shape="rect" id="node6" href="$classqueue_l_l.html#adcbcc26433da2c9d17b6cf0802d1d7d2" title="queueLL::add" alt="" coords="364,107,464,133"/>
+<area shape="rect" id="node7" href="$classbook.html#a61624bab2476a61fb2f27ebf7c8976e3" title="book::setDueTime" alt="" coords="349,157,479,184"/>
+</map>

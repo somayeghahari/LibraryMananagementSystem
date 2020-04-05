@@ -1,0 +1,8 @@
+<map id="student" name="student">
+<area shape="rect" id="node2" href="$classqueue_l_l.html" title="{queueLL\&lt; book \&gt;\n|&#45; size\l|+ queueLL()\l+ ~queueLL()\l+ add()\l+ remove()\l+ removeAtIndex()\l+ atIndex()\l+ getSize()\l+ nodeList()\l+ find()\l}" alt="" coords="47,1256,178,1451"/>
+<area shape="rect" id="node3" href="$classqueue_l_l_node.html" title="{queueLLNode\&lt; book \&gt;\n||+ queueLLNode()\l+ setNode()\l}" alt="" coords="35,1087,190,1179"/>
+<area shape="rect" id="node4" href="$classqueue_l_l_node.html" title="{queueLLNode\&lt; Type \&gt;\n||+ queueLLNode()\l+ setNode()\l}" alt="" coords="35,145,190,237"/>
+<area shape="rect" id="node8" href="$classqueue_l_l_node.html" title="{queueLLNode\&lt; int \&gt;\n|+ data\l|+ queueLLNode()\l+ setNode()\l}" alt="" coords="139,300,279,392"/>
+<area shape="rect" id="node6" href="$classbook.html" title="{book\n|&#45; id\l&#45; name\l&#45; authorName\l&#45; borrowed\l&#45; borrowedByStudent\l&#45; due_time\l|+ book()\l+ book()\l+ ~book()\l+ getAuthorName()\l+ setAuthorName()\l+ isBorrowed()\l+ setBorrowed()\l+ getDueTime()\l+ setDueTime()\l+ getId()\land 9 more...\l}" alt="" coords="137,727,281,1024"/>
+<area shape="rect" id="node7" href="$classqueue_l_l.html" title="{queueLL\&lt; int \&gt;\n|&#45; size\l|+ queueLL()\l+ ~queueLL()\l+ add()\l+ remove()\l+ removeAtIndex()\l+ atIndex()\l+ getSize()\l+ nodeList()\l+ find()\l}" alt="" coords="153,469,283,664"/>
+</map>

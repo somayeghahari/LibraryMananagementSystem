@@ -1,0 +1,5 @@
+<map id="book" name="book">
+<area shape="rect" id="node2" href="$classqueue_l_l.html" title="{queueLL\&lt; int \&gt;\n|&#45; size\l|+ queueLL()\l+ ~queueLL()\l+ add()\l+ remove()\l+ removeAtIndex()\l+ atIndex()\l+ getSize()\l+ nodeList()\l+ find()\l}" alt="" coords="17,469,148,664"/>
+<area shape="rect" id="node3" href="$classqueue_l_l_node.html" title="{queueLLNode\&lt; int \&gt;\n|+ data\l|+ queueLLNode()\l+ setNode()\l}" alt="" coords="13,300,153,392"/>
+<area shape="rect" id="node4" href="$classqueue_l_l_node.html" title="{queueLLNode\&lt; Type \&gt;\n||+ queueLLNode()\l+ setNode()\l}" alt="" coords="5,145,160,237"/>
+</map>
