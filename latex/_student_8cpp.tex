@@ -1,0 +1,89 @@
+\hypertarget{_student_8cpp}{}\section{src/\+Student.cpp File Reference}
+\label{_student_8cpp}\index{src/\+Student.\+cpp@{src/\+Student.\+cpp}}
+{\ttfamily \#include \char`\"{}Student.\+h\char`\"{}}\newline
+Include dependency graph for Student.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_student_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{_student_8cpp_a73f5ef786ecabf4118c6606f42829606}{operator$<$$<$} (std\+::ostream \&out, const \hyperlink{classstudent}{student} \&st)
+\item 
+bool \hyperlink{_student_8cpp_a109759a391b870345c0935cf30c7bd32}{operator$<$} (const \hyperlink{classstudent}{student} \&s1, const \hyperlink{classstudent}{student} \&s2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_student_8cpp_a109759a391b870345c0935cf30c7bd32}\label{_student_8cpp_a109759a391b870345c0935cf30c7bd32}} 
+\index{Student.\+cpp@{Student.\+cpp}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Student.\+cpp@{Student.\+cpp}}
+\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool operator$<$ (\begin{DoxyParamCaption}\item[{const \hyperlink{classstudent}{student} \&}]{s1,  }\item[{const \hyperlink{classstudent}{student} \&}]{s2 }\end{DoxyParamCaption})}
+
+
+
+Definition at line 73 of file Student.\+cpp.
+
+
+\begin{DoxyCode}
+73                                                       \{
+74     \textcolor{keywordflow}{if}(s1.\hyperlink{classstudent_a718b1fdd02dd1ed06110f9e0e7ec7720}{getId}()<s2.\hyperlink{classstudent_a718b1fdd02dd1ed06110f9e0e7ec7720}{getId}())
+75         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+76     \textcolor{keywordflow}{else}
+77         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+78 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{_student_8cpp_a109759a391b870345c0935cf30c7bd32_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_student_8cpp_a73f5ef786ecabf4118c6606f42829606}\label{_student_8cpp_a73f5ef786ecabf4118c6606f42829606}} 
+\index{Student.\+cpp@{Student.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Student.\+cpp@{Student.\+cpp}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \hyperlink{classstudent}{student} \&}]{st }\end{DoxyParamCaption})}
+
+function overloads operator $<$$<$ 
+\begin{DoxyParams}{Parameters}
+{\em out} & output stream \\
+\hline
+{\em st} & student object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 63 of file Student.\+cpp.
+
+
+\begin{DoxyCode}
+63                                                            \{
+64     \textcolor{keywordflow}{if}(st.\hyperlink{classstudent_ab477f6c1525709586ea41364dc8c568b}{borrowedBooks}->\hyperlink{classqueue_l_l_a8969feebcb563f0b489bc112422b9563}{getSize}()>0)\{
+65         \textcolor{keywordflow}{return} out <<\textcolor{stringliteral}{"STUDENT id="}<< st.\hyperlink{classstudent_a8215d11b0d1adc77e0808a0ff4d0f6a2}{id} << \textcolor{stringliteral}{" name="} <<st.\hyperlink{classstudent_a8bba46a454eaecf8619a68c4c38c7b8d}{name} <<
+66                 \textcolor{stringliteral}{" \{list of borrowed books:\(\backslash\)n"}<<*(st.\hyperlink{classstudent_ab477f6c1525709586ea41364dc8c568b}{borrowedBooks})<<\textcolor{stringliteral}{"\}\(\backslash\)n"};
+67     \}
+68     \textcolor{keywordflow}{else}\{
+69         \textcolor{keywordflow}{return} out <<\textcolor{stringliteral}{"STUDENT id="}<< st.\hyperlink{classstudent_a8215d11b0d1adc77e0808a0ff4d0f6a2}{id} << \textcolor{stringliteral}{" name="} <<st.\hyperlink{classstudent_a8bba46a454eaecf8619a68c4c38c7b8d}{name} << \textcolor{stringliteral}{" , student did not borrow a book
+      \(\backslash\)n "};
+70     \}
+71 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{_student_8cpp_a73f5ef786ecabf4118c6606f42829606_cgraph}
+\end{center}
+\end{figure}

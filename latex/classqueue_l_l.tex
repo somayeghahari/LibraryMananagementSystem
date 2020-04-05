@@ -1,0 +1,493 @@
+\hypertarget{classqueue_l_l}{}\section{queue\+LL$<$ Type $>$ Class Template Reference}
+\label{classqueue_l_l}\index{queue\+L\+L$<$ Type $>$@{queue\+L\+L$<$ Type $>$}}
+
+
+{\ttfamily \#include $<$Queue\+L\+L.\+h$>$}
+
+
+
+Collaboration diagram for queue\+LL$<$ Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classqueue_l_l__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classqueue_l_l_a8d7c7b45de1dcf799d5c7bad996094eb}{queue\+LL} ()
+\item 
+virtual \hyperlink{classqueue_l_l_af1560879b08f475cccfca106e0320cf6}{$\sim$queue\+LL} ()
+\item 
+void \hyperlink{classqueue_l_l_adcbcc26433da2c9d17b6cf0802d1d7d2}{add} (Type $\ast$value)
+\item 
+Type $\ast$ \hyperlink{classqueue_l_l_a4204a9db973b69be5824ca2495130b40}{remove} ()
+\item 
+Type $\ast$ \hyperlink{classqueue_l_l_abe3f175ee8c25c55d18650c5b13297b1}{remove\+At\+Index} (int index)
+\item 
+\hyperlink{classqueue_l_l_node}{queue\+L\+L\+Node}$<$ Type $>$ $\ast$ \hyperlink{classqueue_l_l_a6c8873be0f08b3b2e83a24469fbfaa5d}{at\+Index} (int index)
+\item 
+size\+\_\+t \hyperlink{classqueue_l_l_a8969feebcb563f0b489bc112422b9563}{get\+Size} () const
+\item 
+Type $\ast$$\ast$ \hyperlink{classqueue_l_l_ae9a479b9463f51c5148dd80b68335d32}{node\+List} ()
+\item 
+int \hyperlink{classqueue_l_l_af46d9d07b7528da834c2c37d752c29f5}{find} (Type data)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classqueue_l_l_node}{queue\+L\+L\+Node}$<$ Type $>$ $\ast$ \hyperlink{classqueue_l_l_a622ea439d113fe8e4616320ec2346d8b}{front}
+\item 
+\hyperlink{classqueue_l_l_node}{queue\+L\+L\+Node}$<$ Type $>$ $\ast$ \hyperlink{classqueue_l_l_aab0540567095f05fb1c981a2e7e4e93e}{rear}
+\item 
+size\+\_\+t \hyperlink{classqueue_l_l_af2ae538d6971624f1c8404d3a8502aa0}{size}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{classqueue_l_l_a24d410ee760513f96b06f242b1025e8e}{operator$<$$<$} (std\+::ostream \&out, const \hyperlink{classqueue_l_l}{queue\+LL} \&b)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Type$>$\newline
+class queue\+L\+L$<$ Type $>$}
+
+Generic class \hyperlink{classqueue_l_l}{queue\+LL} is the queue data structure which is implemented based on the linked list datastructure 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Type} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 52 of file Queue\+L\+L.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classqueue_l_l_a8d7c7b45de1dcf799d5c7bad996094eb}\label{classqueue_l_l_a8d7c7b45de1dcf799d5c7bad996094eb}} 
+\index{queue\+LL@{queue\+LL}!queue\+LL@{queue\+LL}}
+\index{queue\+LL@{queue\+LL}!queue\+LL@{queue\+LL}}
+\subsubsection{\texorpdfstring{queue\+L\+L()}{queueLL()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+\hyperlink{classqueue_l_l}{queue\+LL}$<$ Type $>$\+::\hyperlink{classqueue_l_l}{queue\+LL} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+constructor function 
+
+Definition at line 71 of file Queue\+L\+L.\+h.
+
+
+\begin{DoxyCode}
+71              \{
+72         \hyperlink{classqueue_l_l_a622ea439d113fe8e4616320ec2346d8b}{front} = \hyperlink{classqueue_l_l_aab0540567095f05fb1c981a2e7e4e93e}{rear} = 0;
+73         \hyperlink{classqueue_l_l_af2ae538d6971624f1c8404d3a8502aa0}{size} = 0;
+74     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classqueue_l_l_af1560879b08f475cccfca106e0320cf6}\label{classqueue_l_l_af1560879b08f475cccfca106e0320cf6}} 
+\index{queue\+LL@{queue\+LL}!````~queue\+LL@{$\sim$queue\+LL}}
+\index{````~queue\+LL@{$\sim$queue\+LL}!queue\+LL@{queue\+LL}}
+\subsubsection{\texorpdfstring{$\sim$queue\+L\+L()}{~queueLL()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+virtual \hyperlink{classqueue_l_l}{queue\+LL}$<$ Type $>$\+::$\sim$\hyperlink{classqueue_l_l}{queue\+LL} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+destructore function deletes the nodes in the queue and destroy the queuee 
+
+Definition at line 79 of file Queue\+L\+L.\+h.
+
+
+\begin{DoxyCode}
+79                       \{
+80         \hyperlink{classqueue_l_l_node}{queueLLNode<Type>} *temp;
+81 
+82         \textcolor{keywordflow}{while}(\hyperlink{classqueue_l_l_a622ea439d113fe8e4616320ec2346d8b}{front}!=0)
+83         \{
+84             temp=\hyperlink{classqueue_l_l_a622ea439d113fe8e4616320ec2346d8b}{front};
+85             \hyperlink{classqueue_l_l_a622ea439d113fe8e4616320ec2346d8b}{front}=\hyperlink{classqueue_l_l_a622ea439d113fe8e4616320ec2346d8b}{front}->next;
+86             \textcolor{keyword}{delete} temp;
+87             \hyperlink{classqueue_l_l_af2ae538d6971624f1c8404d3a8502aa0}{size}--;
+88         \}
+89         \hyperlink{classqueue_l_l_aab0540567095f05fb1c981a2e7e4e93e}{rear}=0;
+90         \hyperlink{classqueue_l_l_af2ae538d6971624f1c8404d3a8502aa0}{size}=0;
+91     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classqueue_l_l_adcbcc26433da2c9d17b6cf0802d1d7d2}\label{classqueue_l_l_adcbcc26433da2c9d17b6cf0802d1d7d2}} 
+\index{queue\+LL@{queue\+LL}!add@{add}}
+\index{add@{add}!queue\+LL@{queue\+LL}}
+\subsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+void \hyperlink{classqueue_l_l}{queue\+LL}$<$ Type $>$\+::add (\begin{DoxyParamCaption}\item[{Type $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+function adds a new node to rear of the queue 
+\begin{DoxyParams}{Parameters}
+{\em value} & data of the node \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 96 of file Queue\+L\+L.\+h.
+
+
+\begin{DoxyCode}
+96                            \{
+97 
+98         \textcolor{comment}{// Create a new LL node}
+99         \hyperlink{classqueue_l_l_node}{queueLLNode<Type>}* temp = \textcolor{keyword}{new} \hyperlink{classqueue_l_l_node}{queueLLNode<Type>}(value);
+100 
+101         \textcolor{keywordflow}{if} (\hyperlink{classqueue_l_l_aab0540567095f05fb1c981a2e7e4e93e}{rear} == 0) \{    \textcolor{comment}{// If queue is empty,}
+102             \hyperlink{classqueue_l_l_a622ea439d113fe8e4616320ec2346d8b}{front} = \hyperlink{classqueue_l_l_aab0540567095f05fb1c981a2e7e4e93e}{rear} = temp;
+103             \hyperlink{classqueue_l_l_af2ae538d6971624f1c8404d3a8502aa0}{size}++;
+104         \}
+105         \textcolor{keywordflow}{else}\{   \textcolor{comment}{// Add the new node at the end of queue}
+106             \hyperlink{classqueue_l_l_aab0540567095f05fb1c981a2e7e4e93e}{rear}->next = temp;
+107             \hyperlink{classqueue_l_l_aab0540567095f05fb1c981a2e7e4e93e}{rear} = temp;
+108             \hyperlink{classqueue_l_l_af2ae538d6971624f1c8404d3a8502aa0}{size}++;
+109         \}
+110     \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classqueue_l_l_adcbcc26433da2c9d17b6cf0802d1d7d2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classqueue_l_l_a6c8873be0f08b3b2e83a24469fbfaa5d}\label{classqueue_l_l_a6c8873be0f08b3b2e83a24469fbfaa5d}} 
+\index{queue\+LL@{queue\+LL}!at\+Index@{at\+Index}}
+\index{at\+Index@{at\+Index}!queue\+LL@{queue\+LL}}
+\subsubsection{\texorpdfstring{at\+Index()}{atIndex()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+\hyperlink{classqueue_l_l_node}{queue\+L\+L\+Node}$<$Type$>$$\ast$ \hyperlink{classqueue_l_l}{queue\+LL}$<$ Type $>$\+::at\+Index (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+function returns the node at location index of the queue \begin{DoxyReturn}{Returns}
+pointer to the node which is located at location index of the queue 
+\end{DoxyReturn}
+
+
+Definition at line 172 of file Queue\+L\+L.\+h.
+
+
+\begin{DoxyCode}
+173     \{
+174 
+175         \hyperlink{classqueue_l_l_node}{queueLLNode<Type>}* temp = \hyperlink{classqueue_l_l_a622ea439d113fe8e4616320ec2346d8b}{front};
+176 
+177 
+178         \textcolor{keywordtype}{int} count = 0;
+179         \textcolor{keywordflow}{while} (temp != 0)
+180         \{
+181             \textcolor{keywordflow}{if} (count == index)
+182                 \textcolor{keywordflow}{return}(temp);
+183             count++;
+184             temp = temp->\hyperlink{classqueue_l_l_node_ab8367d61c51828d9f21d72537b62735f}{next};
+185         \}
+186         std::cout<<\textcolor{stringliteral}{"Node at index:"}<<index<<\textcolor{stringliteral}{" does not exist\(\backslash\)n"};
+187 
+188         \textcolor{keywordflow}{return} 0;
+189     \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classqueue_l_l_a6c8873be0f08b3b2e83a24469fbfaa5d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classqueue_l_l_af46d9d07b7528da834c2c37d752c29f5}\label{classqueue_l_l_af46d9d07b7528da834c2c37d752c29f5}} 
+\index{queue\+LL@{queue\+LL}!find@{find}}
+\index{find@{find}!queue\+LL@{queue\+LL}}
+\subsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+int \hyperlink{classqueue_l_l}{queue\+LL}$<$ Type $>$\+::find (\begin{DoxyParamCaption}\item[{Type}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+functions finds the index of the node with specififc data 
+\begin{DoxyParams}{Parameters}
+{\em data} & data of the node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: index of the node 
+\end{DoxyReturn}
+
+
+Definition at line 240 of file Queue\+L\+L.\+h.
+
+
+\begin{DoxyCode}
+240                        \{
+241         \textcolor{keywordtype}{int} i=-1;
+242         \textcolor{keywordflow}{if}(\hyperlink{classqueue_l_l_a622ea439d113fe8e4616320ec2346d8b}{front})\{
+243             i=0;
+244             \hyperlink{classqueue_l_l_node}{queueLLNode<Type>} *temp=\hyperlink{classqueue_l_l_a622ea439d113fe8e4616320ec2346d8b}{front};
+245             \textcolor{keywordflow}{while}(temp && *(temp->\hyperlink{classqueue_l_l_node_a20b1170d8c5852b7dc01e56fda4e4206}{data})!=data)\{
+246                 temp = temp->\hyperlink{classqueue_l_l_node_ab8367d61c51828d9f21d72537b62735f}{next};
+247                 i++;
+248             \}
+249             \textcolor{keywordflow}{if}(temp==NULL)\{
+250                 i = -1;
+251             \}
+252             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(*temp->\hyperlink{classqueue_l_l_node_a20b1170d8c5852b7dc01e56fda4e4206}{data}!=data)\{
+253                 i = -1;
+254             \}
+255         \}
+256         \textcolor{keywordflow}{return} i;
+257     \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classqueue_l_l_af46d9d07b7528da834c2c37d752c29f5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classqueue_l_l_a8969feebcb563f0b489bc112422b9563}\label{classqueue_l_l_a8969feebcb563f0b489bc112422b9563}} 
+\index{queue\+LL@{queue\+LL}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!queue\+LL@{queue\+LL}}
+\subsubsection{\texorpdfstring{get\+Size()}{getSize()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+size\+\_\+t \hyperlink{classqueue_l_l}{queue\+LL}$<$ Type $>$\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+function return size of the queue \begin{DoxyReturn}{Returns}
+size of the queue 
+\end{DoxyReturn}
+
+
+Definition at line 218 of file Queue\+L\+L.\+h.
+
+
+\begin{DoxyCode}
+218                            \{
+219         \textcolor{keywordflow}{return} \hyperlink{classqueue_l_l_af2ae538d6971624f1c8404d3a8502aa0}{size};
+220     \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classqueue_l_l_a8969feebcb563f0b489bc112422b9563_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classqueue_l_l_ae9a479b9463f51c5148dd80b68335d32}\label{classqueue_l_l_ae9a479b9463f51c5148dd80b68335d32}} 
+\index{queue\+LL@{queue\+LL}!node\+List@{node\+List}}
+\index{node\+List@{node\+List}!queue\+LL@{queue\+LL}}
+\subsubsection{\texorpdfstring{node\+List()}{nodeList()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+Type$\ast$$\ast$ \hyperlink{classqueue_l_l}{queue\+LL}$<$ Type $>$\+::node\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+function returns list of the nodes \begin{DoxyReturn}{Returns}
+list of the nodes 
+\end{DoxyReturn}
+
+
+Definition at line 225 of file Queue\+L\+L.\+h.
+
+
+\begin{DoxyCode}
+225                      \{
+226         Type ** list = \textcolor{keyword}{new}  Type*[\hyperlink{classqueue_l_l_af2ae538d6971624f1c8404d3a8502aa0}{size}];
+227         \textcolor{keywordtype}{int} i=0;
+228         \hyperlink{classqueue_l_l_node}{queueLLNode<Type>} *temp=\hyperlink{classqueue_l_l_a622ea439d113fe8e4616320ec2346d8b}{front};
+229         \textcolor{keywordflow}{while}(temp)\{
+230             list[i++] = temp->\hyperlink{classqueue_l_l_node_a20b1170d8c5852b7dc01e56fda4e4206}{data} ;
+231             temp = temp->\hyperlink{classqueue_l_l_node_ab8367d61c51828d9f21d72537b62735f}{next};
+232         \}
+233         \textcolor{keywordflow}{return} list;
+234     \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classqueue_l_l_ae9a479b9463f51c5148dd80b68335d32_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classqueue_l_l_a4204a9db973b69be5824ca2495130b40}\label{classqueue_l_l_a4204a9db973b69be5824ca2495130b40}} 
+\index{queue\+LL@{queue\+LL}!remove@{remove}}
+\index{remove@{remove}!queue\+LL@{queue\+LL}}
+\subsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+Type$\ast$ \hyperlink{classqueue_l_l}{queue\+LL}$<$ Type $>$\+::remove (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+function removes and returns the data of the first node of the queue \begin{DoxyReturn}{Returns}
+pointer to the data of the first node of the queue 
+\end{DoxyReturn}
+
+
+Definition at line 115 of file Queue\+L\+L.\+h.
+
+
+\begin{DoxyCode}
+115                     \{
+116         Type * returnNode = 0;
+117         \textcolor{comment}{// If queue is empty, return false.}
+118         \textcolor{keywordflow}{if} (\hyperlink{classqueue_l_l_a622ea439d113fe8e4616320ec2346d8b}{front} == 0) \{
+119             std::cout<<\textcolor{stringliteral}{"Queue is empty."};
+120         \}
+121         \textcolor{keywordflow}{else}\{
+122             \hyperlink{classqueue_l_l_node}{queueLLNode<Type>}* temp = \hyperlink{classqueue_l_l_a622ea439d113fe8e4616320ec2346d8b}{front};
+123             \hyperlink{classqueue_l_l_a622ea439d113fe8e4616320ec2346d8b}{front} = \hyperlink{classqueue_l_l_a622ea439d113fe8e4616320ec2346d8b}{front}->next;
+124             \textcolor{comment}{//queue gets empty}
+125             \textcolor{keywordflow}{if} (\hyperlink{classqueue_l_l_a622ea439d113fe8e4616320ec2346d8b}{front} == 0)
+126                 \hyperlink{classqueue_l_l_aab0540567095f05fb1c981a2e7e4e93e}{rear} = 0;
+127             returnNode = temp->\hyperlink{classqueue_l_l_node_a20b1170d8c5852b7dc01e56fda4e4206}{data};
+128             \hyperlink{classqueue_l_l_af2ae538d6971624f1c8404d3a8502aa0}{size}--;
+129             \textcolor{keyword}{delete} (temp);
+130             temp = 0;
+131         \}
+132         \textcolor{keywordflow}{return} returnNode;
+133     \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classqueue_l_l_a4204a9db973b69be5824ca2495130b40_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classqueue_l_l_abe3f175ee8c25c55d18650c5b13297b1}\label{classqueue_l_l_abe3f175ee8c25c55d18650c5b13297b1}} 
+\index{queue\+LL@{queue\+LL}!remove\+At\+Index@{remove\+At\+Index}}
+\index{remove\+At\+Index@{remove\+At\+Index}!queue\+LL@{queue\+LL}}
+\subsubsection{\texorpdfstring{remove\+At\+Index()}{removeAtIndex()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+Type$\ast$ \hyperlink{classqueue_l_l}{queue\+LL}$<$ Type $>$\+::remove\+At\+Index (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+function removes and returns the data of the node at location index of the queue \begin{DoxyReturn}{Returns}
+pointer to the data of the node which is located at location index of the queue 
+\end{DoxyReturn}
+
+
+Definition at line 138 of file Queue\+L\+L.\+h.
+
+
+\begin{DoxyCode}
+139     \{
+140         Type * returnNode = 0;
+141         \hyperlink{classqueue_l_l_node}{queueLLNode<Type>}* temp = \hyperlink{classqueue_l_l_a622ea439d113fe8e4616320ec2346d8b}{front};
+142         \hyperlink{classqueue_l_l_node}{queueLLNode<Type>}* prev = \hyperlink{classqueue_l_l_a622ea439d113fe8e4616320ec2346d8b}{front};
+143 
+144 
+145         \textcolor{keywordtype}{int} count = 0;
+146         \textcolor{keywordflow}{while} (temp != 0)
+147         \{
+148             \textcolor{keywordflow}{if} (count == index)\{
+149                 \textcolor{keywordflow}{if}(temp!=\hyperlink{classqueue_l_l_a622ea439d113fe8e4616320ec2346d8b}{front})
+150                     prev->\hyperlink{classqueue_l_l_node_ab8367d61c51828d9f21d72537b62735f}{next} = temp->\hyperlink{classqueue_l_l_node_ab8367d61c51828d9f21d72537b62735f}{next};
+151                 \textcolor{keywordflow}{else}\{
+152                     \hyperlink{classqueue_l_l_a622ea439d113fe8e4616320ec2346d8b}{front}=\hyperlink{classqueue_l_l_aab0540567095f05fb1c981a2e7e4e93e}{rear} = 0;
+153                 \}
+154                 returnNode = temp->\hyperlink{classqueue_l_l_node_a20b1170d8c5852b7dc01e56fda4e4206}{data};
+155                 \hyperlink{classqueue_l_l_af2ae538d6971624f1c8404d3a8502aa0}{size}--;
+156                 \textcolor{keyword}{delete} (temp);
+157                 temp = 0;
+158                 \textcolor{keywordflow}{return} returnNode;
+159             \}
+160             count++;
+161             prev=temp;
+162             temp = temp->\hyperlink{classqueue_l_l_node_ab8367d61c51828d9f21d72537b62735f}{next};
+163         \}
+164         std::cout<<\textcolor{stringliteral}{"Node at index:"}<<index<<\textcolor{stringliteral}{" does not exist\(\backslash\)n"};
+165 
+166         \textcolor{keywordflow}{return} 0;
+167     \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classqueue_l_l_abe3f175ee8c25c55d18650c5b13297b1_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classqueue_l_l_a24d410ee760513f96b06f242b1025e8e}\label{classqueue_l_l_a24d410ee760513f96b06f242b1025e8e}} 
+\index{queue\+LL@{queue\+LL}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!queue\+LL@{queue\+LL}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \hyperlink{classqueue_l_l}{queue\+LL}$<$ Type $>$ \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+function overloads operator $<$$<$ 
+\begin{DoxyParams}{Parameters}
+{\em out} & output stream \\
+\hline
+{\em b} & queue object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 196 of file Queue\+L\+L.\+h.
+
+
+\begin{DoxyCode}
+196                                                                       \{
+197 
+198         \textcolor{keywordflow}{if}(b.\hyperlink{classqueue_l_l_a622ea439d113fe8e4616320ec2346d8b}{front}==0)\{
+199             out<<\textcolor{stringliteral}{"Queue is empty."};
+200         \}
+201         \textcolor{keywordflow}{else}\{
+202             \hyperlink{classqueue_l_l_node}{queueLLNode<Type>} *temp=b.\hyperlink{classqueue_l_l_a622ea439d113fe8e4616320ec2346d8b}{front};
+203             \textcolor{keywordflow}{while}(temp)\{
+204                 out<< *temp->\hyperlink{classqueue_l_l_node_a20b1170d8c5852b7dc01e56fda4e4206}{data} <<\textcolor{stringliteral}{" \(\backslash\)n"};
+205                 temp = temp->\hyperlink{classqueue_l_l_node_ab8367d61c51828d9f21d72537b62735f}{next};
+206             \}
+207         \}
+208 \textcolor{comment}{//      os<<std::endl;}
+209         \textcolor{keywordflow}{return} out;
+210     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classqueue_l_l_a622ea439d113fe8e4616320ec2346d8b}\label{classqueue_l_l_a622ea439d113fe8e4616320ec2346d8b}} 
+\index{queue\+LL@{queue\+LL}!front@{front}}
+\index{front@{front}!queue\+LL@{queue\+LL}}
+\subsubsection{\texorpdfstring{front}{front}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+\hyperlink{classqueue_l_l_node}{queue\+L\+L\+Node}$<$Type$>$$\ast$ \hyperlink{classqueue_l_l}{queue\+LL}$<$ Type $>$\+::front\hspace{0.3cm}{\ttfamily [private]}}
+
+pointer to the first node of the queue 
+
+Definition at line 57 of file Queue\+L\+L.\+h.
+
+\mbox{\Hypertarget{classqueue_l_l_aab0540567095f05fb1c981a2e7e4e93e}\label{classqueue_l_l_aab0540567095f05fb1c981a2e7e4e93e}} 
+\index{queue\+LL@{queue\+LL}!rear@{rear}}
+\index{rear@{rear}!queue\+LL@{queue\+LL}}
+\subsubsection{\texorpdfstring{rear}{rear}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+\hyperlink{classqueue_l_l_node}{queue\+L\+L\+Node}$<$Type$>$$\ast$ \hyperlink{classqueue_l_l}{queue\+LL}$<$ Type $>$\+::rear\hspace{0.3cm}{\ttfamily [private]}}
+
+pointer to the last node of the queue 
+
+Definition at line 61 of file Queue\+L\+L.\+h.
+
+\mbox{\Hypertarget{classqueue_l_l_af2ae538d6971624f1c8404d3a8502aa0}\label{classqueue_l_l_af2ae538d6971624f1c8404d3a8502aa0}} 
+\index{queue\+LL@{queue\+LL}!size@{size}}
+\index{size@{size}!queue\+LL@{queue\+LL}}
+\subsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+size\+\_\+t \hyperlink{classqueue_l_l}{queue\+LL}$<$ Type $>$\+::size\hspace{0.3cm}{\ttfamily [private]}}
+
+size of the queue 
+
+Definition at line 65 of file Queue\+L\+L.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_queue_l_l_8h}{Queue\+L\+L.\+h}\end{DoxyCompactItemize}

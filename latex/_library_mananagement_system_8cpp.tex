@@ -1,0 +1,919 @@
+\hypertarget{_library_mananagement_system_8cpp}{}\section{src/\+Library\+Mananagement\+System.cpp File Reference}
+\label{_library_mananagement_system_8cpp}\index{src/\+Library\+Mananagement\+System.\+cpp@{src/\+Library\+Mananagement\+System.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Student\+Handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Book\+Handler.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+Include dependency graph for Library\+Mananagement\+System.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_library_mananagement_system_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{_library_mananagement_system_8cpp_a4ba67c6c5f6d58844eece44ff28f38f1}{swap} (T $\ast$a, T $\ast$b)
+\item 
+{\footnotesize template$<$typename T $>$ }\\int \hyperlink{_library_mananagement_system_8cpp_af3d1a3d711804d29b4172054d6de56fa}{partition} (T $\ast$arr\+List, int start, int end)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{_library_mananagement_system_8cpp_ab756bf2cc4974ccab046acfcf41e7a95}{Quicksort} (T $\ast$arr\+List, int start, int end)
+\item 
+void \hyperlink{_library_mananagement_system_8cpp_a5d29f499bef3936e914ba9b9bd33c52c}{read\+Students\+From\+File} ()
+\item 
+void \hyperlink{_library_mananagement_system_8cpp_a1489a19670bb87989d92fa0bc667d6f4}{read\+Books\+From\+File} ()
+\item 
+void \hyperlink{_library_mananagement_system_8cpp_a4553a1ae7185f7dfe1cf9d15b38ad35c}{write\+Students\+To\+File} ()
+\item 
+void \hyperlink{_library_mananagement_system_8cpp_abbfe09f5b391ad6e6bdb7b48338a54c6}{write\+Books\+To\+File} ()
+\item 
+void \hyperlink{_library_mananagement_system_8cpp_a36ad170338d7feb540a9ce2f1f8bb1b0}{intro} ()
+\item 
+void \hyperlink{_library_mananagement_system_8cpp_ae2338f2b60de8c59eaa31a6a285c1fc0}{goodbye} ()
+\item 
+void \hyperlink{_library_mananagement_system_8cpp_a49fa1336abeb5443d70a08f235af8e61}{menu1} ()
+\item 
+void \hyperlink{_library_mananagement_system_8cpp_a16202881086f36cce6f9d7878b3bb1f9}{menu\+Admin} ()
+\item 
+void \hyperlink{_library_mananagement_system_8cpp_a496c74d9e9a86d627304d79618738c57}{menu\+Student} ()
+\item 
+int \hyperlink{_library_mananagement_system_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_student_handler}{Student\+Handler} \hyperlink{_library_mananagement_system_8cpp_a35a6ce1dad360c87455a287284462c1a}{students}
+\item 
+\hyperlink{class_book_handler}{Book\+Handler} \hyperlink{_library_mananagement_system_8cpp_a2945b7618a199e1ba93546310a14a75a}{books}
+\item 
+ifstream \hyperlink{_library_mananagement_system_8cpp_a87ba0a10ae7ec7dcd3c5f6471c3dd0ad}{in\+File\+Student}
+\item 
+ifstream \hyperlink{_library_mananagement_system_8cpp_abd9f2d9770f5fdcef61e9800deea25a5}{in\+File\+Book}
+\item 
+ofstream \hyperlink{_library_mananagement_system_8cpp_a2e073350989a922d101f00447e52dfc6}{ou\+File\+Student}
+\item 
+ofstream \hyperlink{_library_mananagement_system_8cpp_acfcc0c04360431d24f658c2d38384701}{ou\+File\+Book}
+\item 
+string \hyperlink{_library_mananagement_system_8cpp_a5cab918573ca8bf696024b65579cbc06}{file\+Name\+Students}
+\item 
+string \hyperlink{_library_mananagement_system_8cpp_a8f027f4595e84c5d1cbcf6997260d43f}{file\+Name\+Books}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_library_mananagement_system_8cpp_ae2338f2b60de8c59eaa31a6a285c1fc0}\label{_library_mananagement_system_8cpp_ae2338f2b60de8c59eaa31a6a285c1fc0}} 
+\index{Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}!goodbye@{goodbye}}
+\index{goodbye@{goodbye}!Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}}
+\subsubsection{\texorpdfstring{goodbye()}{goodbye()}}
+{\footnotesize\ttfamily void goodbye (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+function to print goodbye message 
+
+Definition at line 178 of file Library\+Mananagement\+System.\+cpp.
+
+
+\begin{DoxyCode}
+178               \{
+179     \textcolor{comment}{//system("clear");}
+180     cout<<\textcolor{stringliteral}{"******* THANKS FOR USING THE LIBRARY MANAGEMENT SYSTEM ******* "};
+181     cout<<\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)n******* AUTHOR : YOUR NAME ******* \(\backslash\)n"};
+182 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{_library_mananagement_system_8cpp_ae2338f2b60de8c59eaa31a6a285c1fc0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_library_mananagement_system_8cpp_a36ad170338d7feb540a9ce2f1f8bb1b0}\label{_library_mananagement_system_8cpp_a36ad170338d7feb540a9ce2f1f8bb1b0}} 
+\index{Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}!intro@{intro}}
+\index{intro@{intro}!Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}}
+\subsubsection{\texorpdfstring{intro()}{intro()}}
+{\footnotesize\ttfamily void intro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+function to print intro message 
+
+Definition at line 170 of file Library\+Mananagement\+System.\+cpp.
+
+
+\begin{DoxyCode}
+170             \{
+171     \textcolor{comment}{//system("clear");}
+172     cout<<\textcolor{stringliteral}{"******* THE LIBRARY MANAGEMENT SYSTEM ******* "};
+173     cout<<\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)n******* AUTHOR : YOUR NAME ******* \(\backslash\)n"};
+174 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{_library_mananagement_system_8cpp_a36ad170338d7feb540a9ce2f1f8bb1b0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_library_mananagement_system_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{_library_mananagement_system_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}!main@{main}}
+\index{main@{main}!Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+main function that handles whole program \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 400 of file Library\+Mananagement\+System.\+cpp.
+
+
+\begin{DoxyCode}
+400                                  \{
+401     \hyperlink{_library_mananagement_system_8cpp_a36ad170338d7feb540a9ce2f1f8bb1b0}{intro}();
+402 
+403     \textcolor{keywordtype}{int} choise = 0;
+404 \textcolor{comment}{//  string fileNameStudents;}
+405 \textcolor{comment}{//  string fileNameBooks;}
+406 
+407     \textcolor{keywordflow}{if}(argc == 3)\{
+408         \hyperlink{_library_mananagement_system_8cpp_a5cab918573ca8bf696024b65579cbc06}{fileNameStudents} = argv[1];
+409         \hyperlink{_library_mananagement_system_8cpp_a8f027f4595e84c5d1cbcf6997260d43f}{fileNameBooks} = argv[2];
+410     \}
+411     \textcolor{keywordflow}{else}\{
+412         \hyperlink{_library_mananagement_system_8cpp_a5cab918573ca8bf696024b65579cbc06}{fileNameStudents} = \textcolor{stringliteral}{"student.txt"};
+413         \hyperlink{_library_mananagement_system_8cpp_a8f027f4595e84c5d1cbcf6997260d43f}{fileNameBooks} = \textcolor{stringliteral}{"book.txt"};
+414     \}
+415 
+416     \hyperlink{_library_mananagement_system_8cpp_a1489a19670bb87989d92fa0bc667d6f4}{readBooksFromFile}();
+417     \hyperlink{_library_mananagement_system_8cpp_a5d29f499bef3936e914ba9b9bd33c52c}{readStudentsFromFile}();
+418 
+419     \textcolor{keywordflow}{do}\{
+420         \hyperlink{_library_mananagement_system_8cpp_a49fa1336abeb5443d70a08f235af8e61}{menu1}();
+421         cin >> choise;
+422         \textcolor{keywordflow}{while}(cin.fail()) \{
+423             std::cout << \textcolor{stringliteral}{"YOUR COISE IS NOT VALID\(\backslash\)n"};
+424             std::cin.clear();
+425             std::cin.ignore(256,\textcolor{charliteral}{'\(\backslash\)n'});
+426             cout<<\textcolor{stringliteral}{"RE-ENTER YOUR CHOISE:"};
+427             cin>>choise;
+428         \}
+429         \textcolor{keywordflow}{switch}(choise)\{
+430         \textcolor{keywordflow}{case} 1:
+431             \hyperlink{_library_mananagement_system_8cpp_a16202881086f36cce6f9d7878b3bb1f9}{menuAdmin}();
+432             \textcolor{keywordflow}{break};
+433         \textcolor{keywordflow}{case} 2:
+434             \hyperlink{_library_mananagement_system_8cpp_a496c74d9e9a86d627304d79618738c57}{menuStudent}();
+435             \textcolor{keywordflow}{break};
+436         \textcolor{keywordflow}{case} 9 :
+437              \hyperlink{_library_mananagement_system_8cpp_ae2338f2b60de8c59eaa31a6a285c1fc0}{goodbye}();
+438              \textcolor{keywordflow}{break};
+439 
+440         \}
+441     \}\textcolor{keywordflow}{while}(choise!=9);
+442     \hyperlink{_library_mananagement_system_8cpp_abbfe09f5b391ad6e6bdb7b48338a54c6}{writeBooksToFile}();
+443     \hyperlink{_library_mananagement_system_8cpp_a4553a1ae7185f7dfe1cf9d15b38ad35c}{writeStudentsToFile}();
+444     \textcolor{keywordflow}{return} 0;
+445 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_library_mananagement_system_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_library_mananagement_system_8cpp_a49fa1336abeb5443d70a08f235af8e61}\label{_library_mananagement_system_8cpp_a49fa1336abeb5443d70a08f235af8e61}} 
+\index{Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}!menu1@{menu1}}
+\index{menu1@{menu1}!Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}}
+\subsubsection{\texorpdfstring{menu1()}{menu1()}}
+{\footnotesize\ttfamily void menu1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+function to print initial menu 
+
+Definition at line 186 of file Library\+Mananagement\+System.\+cpp.
+
+
+\begin{DoxyCode}
+186             \{
+187     cout<<\textcolor{stringliteral}{"\(\backslash\)n1. ADMINISTRATOR"};
+188     cout<<\textcolor{stringliteral}{"\(\backslash\)n2. STUDENT"};
+189     cout<<\textcolor{stringliteral}{"\(\backslash\)n9. EXIT"};
+190     cout<<\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)nENTER YOUR CHOISE: "};
+191 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{_library_mananagement_system_8cpp_a49fa1336abeb5443d70a08f235af8e61_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_library_mananagement_system_8cpp_a16202881086f36cce6f9d7878b3bb1f9}\label{_library_mananagement_system_8cpp_a16202881086f36cce6f9d7878b3bb1f9}} 
+\index{Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}!menu\+Admin@{menu\+Admin}}
+\index{menu\+Admin@{menu\+Admin}!Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}}
+\subsubsection{\texorpdfstring{menu\+Admin()}{menuAdmin()}}
+{\footnotesize\ttfamily void menu\+Admin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+function to handle and show administrator\textquotesingle{}s menu 
+
+Definition at line 195 of file Library\+Mananagement\+System.\+cpp.
+
+
+\begin{DoxyCode}
+195                 \{
+196     \textcolor{keywordtype}{int} choise = 0;
+197     \textcolor{keywordtype}{int} \textcolor{keywordtype}{id}=0;
+198     std::string name;
+199     std::string authName;
+200 
+201     \textcolor{keywordflow}{do}\{
+202         cout<<\textcolor{stringliteral}{"\(\backslash\)n1. ADD STUDENT"};
+203         cout<<\textcolor{stringliteral}{"\(\backslash\)n2. PRINT STUDENTS LIST"};
+204         cout<<\textcolor{stringliteral}{"\(\backslash\)n3. ADD BOOK"};
+205         cout<<\textcolor{stringliteral}{"\(\backslash\)n4. PRINT BOOKS LIST"};
+206         cout<<\textcolor{stringliteral}{"\(\backslash\)n5. PRINT BORROWED BOOKS (SORT BASED ON DUE DATE)"};
+207         cout<<\textcolor{stringliteral}{"\(\backslash\)n9. RETURN TO PREVIOUS MENU"};
+208         cout<<\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)nENTER YOUR CHOISE: "};
+209         cin >> choise;
+210         \textcolor{keywordflow}{switch}(choise)\{
+211         \textcolor{keywordflow}{case} 1:
+212         \{
+213             cout<<\textcolor{stringliteral}{"ENTER STUDENT ID:"};
+214             cin>>id;
+215             \textcolor{keywordflow}{while}(cin.fail()) \{
+216                 std::cout << \textcolor{stringliteral}{"ID IS NOT VALID\(\backslash\)n"};
+217                 std::cin.clear();
+218                 std::cin.ignore(256,\textcolor{charliteral}{'\(\backslash\)n'});
+219                 cout<<\textcolor{stringliteral}{"RE-ENTER STUDENT ID:"};
+220                 cin>>id;
+221             \}
+222             \textcolor{keywordflow}{while} ( \hyperlink{_library_mananagement_system_8cpp_a35a6ce1dad360c87455a287284462c1a}{students}.\hyperlink{class_student_handler_ad54072af22b0b84e677af69426ed0bff}{findStudentId}(\textcolor{keywordtype}{id}) )\{
+223                 std::cout << \textcolor{stringliteral}{"ANOTHER STUDENT HAS SAME ID, \(\backslash\)n"};
+224                 cout<<\textcolor{stringliteral}{"RE-ENTER STUDENT ID:"};
+225                 cin>>id;
+226             \}
+227             cout<<\textcolor{stringliteral}{"ENTER STUDENT NAME:"};
+228             cin>>name;
+229             \hyperlink{classstudent}{student} * stdnt = \textcolor{keyword}{new} \hyperlink{classstudent}{student}(\textcolor{keywordtype}{id}, name);
+230             \hyperlink{_library_mananagement_system_8cpp_a35a6ce1dad360c87455a287284462c1a}{students}.\hyperlink{class_student_handler_ae7219f3612d49a8bda1cb14c48557b37}{addStudent}(stdnt);
+231 \textcolor{comment}{//          string temp;}
+232 \textcolor{comment}{//          stdnt->createLine(temp);}
+233 \textcolor{comment}{//          ouFileStudent<<temp;}
+234             \textcolor{keywordflow}{break};
+235         \}
+236         \textcolor{keywordflow}{case} 2:
+237         \{
+238             \hyperlink{_library_mananagement_system_8cpp_a35a6ce1dad360c87455a287284462c1a}{students}.\hyperlink{class_student_handler_a08899a7b8ca38541605c564c572d72ef}{print}();
+239             \textcolor{keywordflow}{break};
+240         \}
+241         \textcolor{keywordflow}{case} 3:
+242         \{
+243             cout<<\textcolor{stringliteral}{"ENTER BOOK NAME:"};
+244             cin>>name;
+245             cout<<\textcolor{stringliteral}{"ENTER AUTHOR NAME:"};
+246             cin>>authName;
+247             \hyperlink{_library_mananagement_system_8cpp_a2945b7618a199e1ba93546310a14a75a}{books}.\hyperlink{class_book_handler_a29517e8c55796a94f29c48d6971e9f1d}{addBook}( name, authName);
+248             \textcolor{keywordflow}{break};
+249         \}
+250         \textcolor{keywordflow}{case} 4:
+251         \{
+252             \hyperlink{_library_mananagement_system_8cpp_a2945b7618a199e1ba93546310a14a75a}{books}.\hyperlink{class_book_handler_ac6e2d4211b55e636348daaa9253a2d12}{print}();
+253             \textcolor{keywordflow}{break};
+254         \}
+255         \textcolor{keywordflow}{case} 5:
+256         \{
+257             \textcolor{keywordtype}{string}  borrowedBooks[\hyperlink{_library_mananagement_system_8cpp_a2945b7618a199e1ba93546310a14a75a}{books}.\hyperlink{class_book_handler_a2939194b5d19618d5a69743b4c0dc240}{getSize}()];
+258             \textcolor{keywordtype}{int} borrowedBooksSize = 0;
+259             \hyperlink{_library_mananagement_system_8cpp_a2945b7618a199e1ba93546310a14a75a}{books}.\hyperlink{class_book_handler_ac0274027fa9375870ffb08fbb6377a7d}{borrowedBooksStrList}(borrowedBooks,borrowedBooksSize);
+260             \textcolor{keywordflow}{if}(borrowedBooksSize==0)\{
+261                 cout<<\textcolor{stringliteral}{"NO BOOK IS BORROWED\(\backslash\)n"};
+262             \}
+263             \textcolor{keywordflow}{else}\{
+264                 \hyperlink{_library_mananagement_system_8cpp_ab756bf2cc4974ccab046acfcf41e7a95}{Quicksort}(borrowedBooks, 0, borrowedBooksSize-1);
+265                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0;j<borrowedBooksSize;j++)\{
+266                     std::cout<<borrowedBooks[j].substr(11);
+267                 \}
+268             \}
+269             \textcolor{keywordflow}{break};
+270         \}
+271         \textcolor{keywordflow}{case} 9:
+272             \textcolor{keywordflow}{break};
+273         \textcolor{keywordflow}{default}:
+274             cout<<\textcolor{stringliteral}{"Unknown input"};
+275             \textcolor{keywordflow}{break};
+276         \}
+277     \}\textcolor{keywordflow}{while}(choise!=9);
+278     \hyperlink{_library_mananagement_system_8cpp_abbfe09f5b391ad6e6bdb7b48338a54c6}{writeBooksToFile}();
+279     \hyperlink{_library_mananagement_system_8cpp_a4553a1ae7185f7dfe1cf9d15b38ad35c}{writeStudentsToFile}();
+280 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_library_mananagement_system_8cpp_a16202881086f36cce6f9d7878b3bb1f9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{_library_mananagement_system_8cpp_a16202881086f36cce6f9d7878b3bb1f9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_library_mananagement_system_8cpp_a496c74d9e9a86d627304d79618738c57}\label{_library_mananagement_system_8cpp_a496c74d9e9a86d627304d79618738c57}} 
+\index{Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}!menu\+Student@{menu\+Student}}
+\index{menu\+Student@{menu\+Student}!Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}}
+\subsubsection{\texorpdfstring{menu\+Student()}{menuStudent()}}
+{\footnotesize\ttfamily void menu\+Student (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+function to handle and show student\textquotesingle{}s meni 
+
+Definition at line 284 of file Library\+Mananagement\+System.\+cpp.
+
+
+\begin{DoxyCode}
+284                   \{
+285     \textcolor{keywordtype}{int} choise = 0;
+286     \hyperlink{classstudent}{student} * currentStudent = NULL;
+287     \textcolor{keywordtype}{int} \textcolor{keywordtype}{id}=0;
+288     std::string name;
+289     std::string authName;
+290     \hyperlink{classbook}{book} * fBook =NULL;
+291 
+292     \textcolor{keywordflow}{do}\{
+293         cout<<\textcolor{stringliteral}{"ENTER YOUR ID:"};
+294         cin >>id;
+295         \textcolor{keywordflow}{while}(cin.fail()) \{
+296             std::cout << \textcolor{stringliteral}{"ID IS NOT VALID\(\backslash\)n"};
+297             std::cin.clear();
+298             std::cin.ignore(256,\textcolor{charliteral}{'\(\backslash\)n'});
+299             cout<<\textcolor{stringliteral}{"RE-ENTER SYUDENT ID:"};
+300             cin>>id;
+301         \}
+302         currentStudent = \hyperlink{_library_mananagement_system_8cpp_a35a6ce1dad360c87455a287284462c1a}{students}.\hyperlink{class_student_handler_ad54072af22b0b84e677af69426ed0bff}{findStudentId}(\textcolor{keywordtype}{id});
+303         \textcolor{keywordflow}{if}(currentStudent== NULL)\{
+304             cout<<\textcolor{stringliteral}{"STUDENT ID NOT FOUND!\(\backslash\)n"};
+305         \}
+306     \}\textcolor{keywordflow}{while}(currentStudent== NULL);
+307 
+308     \textcolor{keywordflow}{do}\{
+309         cout<<\textcolor{stringliteral}{"\(\backslash\)n1. BORROW A BOOK"};
+310         cout<<\textcolor{stringliteral}{"\(\backslash\)n2. RETURN A BOOK"};
+311         cout<<\textcolor{stringliteral}{"\(\backslash\)n3. PRINT BORROWED BOOKS"};
+312         cout<<\textcolor{stringliteral}{"\(\backslash\)n5. PRINT BOOKS LIST"};
+313         cout<<\textcolor{stringliteral}{"\(\backslash\)n9. RETURN TO PREVIOUS MENU"};
+314         cout<<\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)nENTER YOUR CHOISE: "};
+315         cin >> choise;
+316         \textcolor{keywordflow}{switch}(choise)\{
+317         \textcolor{keywordflow}{case} 1:
+318         \{
+319             fBook =NULL;
+320             \textcolor{keywordflow}{do}\{
+321                 cout<<\textcolor{stringliteral}{"ENTER BOOK ID TO BORROW:"};
+322                 cin>>id;
+323                 \textcolor{keywordflow}{while}(cin.fail()) \{
+324                     std::cout << \textcolor{stringliteral}{"ID IS NOT VALID\(\backslash\)n"};
+325                     std::cin.clear();
+326                     std::cin.ignore(256,\textcolor{charliteral}{'\(\backslash\)n'});
+327                     cout<<\textcolor{stringliteral}{"RE-ENTER BOOK ID:"};
+328                     cin>>id;
+329                 \}
+330                 fBook = \hyperlink{_library_mananagement_system_8cpp_a2945b7618a199e1ba93546310a14a75a}{books}.\hyperlink{class_book_handler_ae82abc7349e19e59cd6f3cb23c7928fa}{findBookId}(\textcolor{keywordtype}{id});
+331                 \textcolor{keywordflow}{if}(fBook== NULL)\{
+332                     cout<<\textcolor{stringliteral}{"BOOK ID NOT FOUND!\(\backslash\)n"};
+333                 \}
+334             \}\textcolor{keywordflow}{while}(fBook== NULL);
+335             \textcolor{keywordtype}{int} *stdId = \textcolor{keyword}{new} int(currentStudent->\hyperlink{classstudent_a718b1fdd02dd1ed06110f9e0e7ec7720}{getId}());
+336             \textcolor{keywordflow}{if}(fBook->\hyperlink{classbook_a68bc47d79edd93594d50f720be2653f6}{borrowBook}(stdId))\{
+337                 currentStudent->\hyperlink{classstudent_af02c927727b890c189a4641f01185bcc}{addBorrowedBook}(fBook);
+338                 cout<<\textcolor{stringliteral}{"STUDENT "}<<currentStudent->\hyperlink{classstudent_a718b1fdd02dd1ed06110f9e0e7ec7720}{getId}()<<\textcolor{stringliteral}{" BORROWS BOOK "}<<\textcolor{keywordtype}{id}<<\textcolor{stringliteral}{"\(\backslash\)n"};
+339             \}
+340             \textcolor{keywordflow}{break};
+341         \}
+342         \textcolor{keywordflow}{case} 2:
+343         \{
+344             fBook =NULL;
+345             \textcolor{keywordflow}{do}\{
+346                 cout<<\textcolor{stringliteral}{"ENTER BOOK ID TO RETURN:"};
+347                 cin>>id;
+348                 \textcolor{keywordflow}{while}(cin.fail()) \{
+349                     std::cout << \textcolor{stringliteral}{"ID IS NOT VALID\(\backslash\)n"};
+350                     std::cin.clear();
+351                     std::cin.ignore(256,\textcolor{charliteral}{'\(\backslash\)n'});
+352                     cout<<\textcolor{stringliteral}{"RE-ENTER BOOK ID:"};
+353                     cin>>id;
+354                 \}
+355                 fBook = \hyperlink{_library_mananagement_system_8cpp_a2945b7618a199e1ba93546310a14a75a}{books}.\hyperlink{class_book_handler_ae82abc7349e19e59cd6f3cb23c7928fa}{findBookId}(\textcolor{keywordtype}{id});
+356                 \textcolor{keywordflow}{if}(fBook== NULL)\{
+357                     cout<<\textcolor{stringliteral}{"BOOK ID NOT FOUND IN BOOK LIST!"};
+358                 \}
+359             \}\textcolor{keywordflow}{while}(fBook== NULL);
+360             \textcolor{keywordtype}{int} xBookId = currentStudent->\hyperlink{classstudent_a27120d590ee93cc80c5b9d72d91a2eb3}{getBorrowedBooks}()->
+      \hyperlink{classqueue_l_l_af46d9d07b7528da834c2c37d752c29f5}{find}(*fBook);
+361             \textcolor{keywordflow}{if}(xBookId!=-1)\{
+362                 \textcolor{keywordtype}{int} sid = fBook->\hyperlink{classbook_af11d02d9964b788986dc8e26d1cdf373}{returnBook}();
+363                 \textcolor{keywordflow}{if}(sid > -1)\{
+364                     currentStudent->\hyperlink{classstudent_a5387f0131233065383ca141ddec50de6}{removeBorrowedBookAtindex}(xBookId);
+365                 \}
+366                 \textcolor{keywordflow}{if}(sid > 0 )\{
+367                     \hyperlink{classstudent}{student} * tempStudent = \hyperlink{_library_mananagement_system_8cpp_a35a6ce1dad360c87455a287284462c1a}{students}.
+      \hyperlink{class_student_handler_ad54072af22b0b84e677af69426ed0bff}{findStudentId}(sid);
+368 
+369                     tempStudent->\hyperlink{classstudent_af02c927727b890c189a4641f01185bcc}{addBorrowedBook}(fBook);
+370                     cout<<\textcolor{stringliteral}{"STUDENT "}<<tempStudent->\hyperlink{classstudent_a718b1fdd02dd1ed06110f9e0e7ec7720}{getId}()<<\textcolor{stringliteral}{" BORROWS BOOK "}<<\textcolor{keywordtype}{id}<<\textcolor{stringliteral}{"\(\backslash\)n"};
+371                 \}
+372             \}
+373             \textcolor{keywordflow}{break};
+374         \}
+375         \textcolor{keywordflow}{case} 3:
+376         \{
+377             cout<<*(currentStudent->\hyperlink{classstudent_a27120d590ee93cc80c5b9d72d91a2eb3}{getBorrowedBooks}());
+378             \textcolor{keywordflow}{break};
+379         \}
+380         \textcolor{keywordflow}{case} 5:
+381         \{
+382             \hyperlink{_library_mananagement_system_8cpp_a2945b7618a199e1ba93546310a14a75a}{books}.\hyperlink{class_book_handler_ac6e2d4211b55e636348daaa9253a2d12}{print}();
+383             \textcolor{keywordflow}{break};
+384         \}
+385         \textcolor{keywordflow}{case} 9:
+386             \textcolor{keywordflow}{break};
+387         \textcolor{keywordflow}{default}:
+388             cout<<\textcolor{stringliteral}{"Unknown input"};
+389             \textcolor{keywordflow}{break};
+390         \}
+391 
+392     \}\textcolor{keywordflow}{while}(choise!=9);
+393     \hyperlink{_library_mananagement_system_8cpp_abbfe09f5b391ad6e6bdb7b48338a54c6}{writeBooksToFile}();
+394     \hyperlink{_library_mananagement_system_8cpp_a4553a1ae7185f7dfe1cf9d15b38ad35c}{writeStudentsToFile}();
+395 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_library_mananagement_system_8cpp_a496c74d9e9a86d627304d79618738c57_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{_library_mananagement_system_8cpp_a496c74d9e9a86d627304d79618738c57_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_library_mananagement_system_8cpp_af3d1a3d711804d29b4172054d6de56fa}\label{_library_mananagement_system_8cpp_af3d1a3d711804d29b4172054d6de56fa}} 
+\index{Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}!partition@{partition}}
+\index{partition@{partition}!Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}}
+\subsubsection{\texorpdfstring{partition()}{partition()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int partition (\begin{DoxyParamCaption}\item[{T $\ast$}]{arr\+List,  }\item[{int}]{start,  }\item[{int}]{end }\end{DoxyParamCaption})}
+
+Generic function to partition the list of items around a pivot 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em arr\+List} & list of items \\
+\hline
+{\em start} & start index \\
+\hline
+{\em end} & end index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: index of the pivot 
+\end{DoxyReturn}
+
+
+Definition at line 49 of file Library\+Mananagement\+System.\+cpp.
+
+
+\begin{DoxyCode}
+50 \{
+51        T pivot = arrList[end]; \textcolor{comment}{// pivot}
+52         \textcolor{keywordtype}{int} i = (start - 1); \textcolor{comment}{// Index of smaller element}
+53 
+54         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = start; j <= end - 1; j++)
+55         \{
+56             \textcolor{comment}{// If current element is smaller than the pivot}
+57             \textcolor{keywordflow}{if} (arrList[j] < pivot)
+58             \{
+59                 i++; \textcolor{comment}{// increment index of smaller element}
+60                 \hyperlink{_library_mananagement_system_8cpp_a4ba67c6c5f6d58844eece44ff28f38f1}{swap}(&arrList[i], &arrList[j]);
+61             \}
+62         \}
+63         \hyperlink{_library_mananagement_system_8cpp_a4ba67c6c5f6d58844eece44ff28f38f1}{swap}(&arrList[i + 1], &arrList[end]);
+64         \textcolor{keywordflow}{return} (i + 1);
+65  \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{_library_mananagement_system_8cpp_af3d1a3d711804d29b4172054d6de56fa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_library_mananagement_system_8cpp_af3d1a3d711804d29b4172054d6de56fa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_library_mananagement_system_8cpp_ab756bf2cc4974ccab046acfcf41e7a95}\label{_library_mananagement_system_8cpp_ab756bf2cc4974ccab046acfcf41e7a95}} 
+\index{Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}!Quicksort@{Quicksort}}
+\index{Quicksort@{Quicksort}!Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}}
+\subsubsection{\texorpdfstring{Quicksort()}{Quicksort()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Quicksort (\begin{DoxyParamCaption}\item[{T $\ast$}]{arr\+List,  }\item[{int}]{start,  }\item[{int}]{end }\end{DoxyParamCaption})}
+
+Generic recursive function to sort list of items based on the Q\+U\+I\+CK S\+O\+RT method 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em arr\+List} & list of items \\
+\hline
+{\em start} & start index \\
+\hline
+{\em end} & end index \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 76 of file Library\+Mananagement\+System.\+cpp.
+
+
+\begin{DoxyCode}
+77  \{
+78     \textcolor{keywordflow}{if}(start<end)
+79     \{
+80          \textcolor{keywordtype}{int} index=\hyperlink{_library_mananagement_system_8cpp_af3d1a3d711804d29b4172054d6de56fa}{partition}(arrList, start, end);
+81              \hyperlink{_library_mananagement_system_8cpp_ab756bf2cc4974ccab046acfcf41e7a95}{Quicksort}(arrList, start, index - 1);
+82              \hyperlink{_library_mananagement_system_8cpp_ab756bf2cc4974ccab046acfcf41e7a95}{Quicksort}(arrList, index + 1, end);
+83     \}
+84 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{_library_mananagement_system_8cpp_ab756bf2cc4974ccab046acfcf41e7a95_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{_library_mananagement_system_8cpp_ab756bf2cc4974ccab046acfcf41e7a95_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_library_mananagement_system_8cpp_a1489a19670bb87989d92fa0bc667d6f4}\label{_library_mananagement_system_8cpp_a1489a19670bb87989d92fa0bc667d6f4}} 
+\index{Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}!read\+Books\+From\+File@{read\+Books\+From\+File}}
+\index{read\+Books\+From\+File@{read\+Books\+From\+File}!Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}}
+\subsubsection{\texorpdfstring{read\+Books\+From\+File()}{readBooksFromFile()}}
+{\footnotesize\ttfamily void read\+Books\+From\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+function to read books\textquotesingle{} list at the beginning from the book\textquotesingle{}s file 
+\begin{DoxyParams}{Parameters}
+{\em file\+Name\+Books} & name of book\textquotesingle{}s file \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 118 of file Library\+Mananagement\+System.\+cpp.
+
+
+\begin{DoxyCode}
+118                         \{
+119     \textcolor{keywordflow}{if}(\hyperlink{_library_mananagement_system_8cpp_a8f027f4595e84c5d1cbcf6997260d43f}{fileNameBooks}!=\textcolor{stringliteral}{""})\{
+120         \hyperlink{_library_mananagement_system_8cpp_abd9f2d9770f5fdcef61e9800deea25a5}{inFileBook}.open(\hyperlink{_library_mananagement_system_8cpp_a8f027f4595e84c5d1cbcf6997260d43f}{fileNameBooks});
+121         \textcolor{keywordflow}{if}(\hyperlink{_library_mananagement_system_8cpp_abd9f2d9770f5fdcef61e9800deea25a5}{inFileBook}.fail())\{
+122             cout<<\textcolor{stringliteral}{"\(\backslash\)nBOOK FILE DOES NOT EXIST\(\backslash\)n\(\backslash\)n"};
+123 \textcolor{comment}{//          goodbye();}
+124 \textcolor{comment}{//          return 0;}
+125         \}
+126         \textcolor{keywordflow}{else}\{
+127             \textcolor{keywordflow}{while}(!\hyperlink{_library_mananagement_system_8cpp_abd9f2d9770f5fdcef61e9800deea25a5}{inFileBook}.eof())
+128             \{
+129                 \textcolor{keywordtype}{string} tStr;
+130                 \hyperlink{classbook}{book} * bk = \textcolor{keyword}{new} \hyperlink{classbook}{book}();
+131                 getline(\hyperlink{_library_mananagement_system_8cpp_abd9f2d9770f5fdcef61e9800deea25a5}{inFileBook}, tStr);
+132                 \textcolor{keywordflow}{if}(tStr.size()>1 && tStr.at(0)!=\textcolor{charliteral}{'#'})\{
+133     \textcolor{comment}{//              cout << tStr ;}
+134                     bk->\hyperlink{classbook_a73dd64c834bd70d659ee456f3ef94c05}{addBOOK\_COUNT}();
+135                     bk->\hyperlink{classbook_acf51be6cb1a1e98d461144e134583c8f}{parseLine}(tStr);
+136                     \hyperlink{_library_mananagement_system_8cpp_a2945b7618a199e1ba93546310a14a75a}{books}.\hyperlink{class_book_handler_a29517e8c55796a94f29c48d6971e9f1d}{addBook}(bk);
+137                 \}
+138 
+139             \}
+140         \}
+141         \hyperlink{_library_mananagement_system_8cpp_abd9f2d9770f5fdcef61e9800deea25a5}{inFileBook}.close();
+142     \}
+143 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_library_mananagement_system_8cpp_a1489a19670bb87989d92fa0bc667d6f4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{_library_mananagement_system_8cpp_a1489a19670bb87989d92fa0bc667d6f4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_library_mananagement_system_8cpp_a5d29f499bef3936e914ba9b9bd33c52c}\label{_library_mananagement_system_8cpp_a5d29f499bef3936e914ba9b9bd33c52c}} 
+\index{Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}!read\+Students\+From\+File@{read\+Students\+From\+File}}
+\index{read\+Students\+From\+File@{read\+Students\+From\+File}!Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}}
+\subsubsection{\texorpdfstring{read\+Students\+From\+File()}{readStudentsFromFile()}}
+{\footnotesize\ttfamily void read\+Students\+From\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+function to read students\textquotesingle{} list at the beginning from the students\textquotesingle{}s file 
+\begin{DoxyParams}{Parameters}
+{\em file\+Name\+Students} & name of student\textquotesingle{}s file \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 89 of file Library\+Mananagement\+System.\+cpp.
+
+
+\begin{DoxyCode}
+89                            \{
+90     \textcolor{keywordflow}{if}(\hyperlink{_library_mananagement_system_8cpp_a5cab918573ca8bf696024b65579cbc06}{fileNameStudents}!=\textcolor{stringliteral}{""})\{
+91         \hyperlink{_library_mananagement_system_8cpp_a87ba0a10ae7ec7dcd3c5f6471c3dd0ad}{inFileStudent}.open(\hyperlink{_library_mananagement_system_8cpp_a5cab918573ca8bf696024b65579cbc06}{fileNameStudents});
+92         \textcolor{keywordflow}{if}(\hyperlink{_library_mananagement_system_8cpp_a87ba0a10ae7ec7dcd3c5f6471c3dd0ad}{inFileStudent}.fail())\{
+93             cout<<\textcolor{stringliteral}{"\(\backslash\)nSTUDENT FILE DOES NOT EXIST\(\backslash\)n\(\backslash\)n"};
+94 \textcolor{comment}{//          goodbye();}
+95 \textcolor{comment}{//          return 0;}
+96         \}
+97         \textcolor{keywordflow}{else}\{
+98             \textcolor{keywordflow}{while}(!\hyperlink{_library_mananagement_system_8cpp_a87ba0a10ae7ec7dcd3c5f6471c3dd0ad}{inFileStudent}.eof())
+99             \{
+100                 \textcolor{keywordtype}{string} tStr;
+101                 \hyperlink{classstudent}{student} * stdnt = \textcolor{keyword}{new} \hyperlink{classstudent}{student}();
+102                 getline(\hyperlink{_library_mananagement_system_8cpp_a87ba0a10ae7ec7dcd3c5f6471c3dd0ad}{inFileStudent}, tStr);
+103                 \textcolor{keywordflow}{if}(tStr.size()>1 && tStr.at(0)!=\textcolor{charliteral}{'#'})\{
+104     \textcolor{comment}{//              cout << tStr ;}
+105                     stdnt->\hyperlink{classstudent_a73c407020ea392b45dc9ff9babc0850b}{parseLine}(tStr, \hyperlink{_library_mananagement_system_8cpp_a2945b7618a199e1ba93546310a14a75a}{books});
+106                     \hyperlink{_library_mananagement_system_8cpp_a35a6ce1dad360c87455a287284462c1a}{students}.\hyperlink{class_student_handler_ae7219f3612d49a8bda1cb14c48557b37}{addStudent}(stdnt);
+107                 \}
+108 
+109             \}
+110         \}
+111         \hyperlink{_library_mananagement_system_8cpp_a87ba0a10ae7ec7dcd3c5f6471c3dd0ad}{inFileStudent}.close();
+112     \}
+113 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_library_mananagement_system_8cpp_a5d29f499bef3936e914ba9b9bd33c52c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{_library_mananagement_system_8cpp_a5d29f499bef3936e914ba9b9bd33c52c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_library_mananagement_system_8cpp_a4ba67c6c5f6d58844eece44ff28f38f1}\label{_library_mananagement_system_8cpp_a4ba67c6c5f6d58844eece44ff28f38f1}} 
+\index{Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}!swap@{swap}}
+\index{swap@{swap}!Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}}
+\subsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void swap (\begin{DoxyParamCaption}\item[{T $\ast$}]{a,  }\item[{T $\ast$}]{b }\end{DoxyParamCaption})}
+
+Generic funcion to swap two items in a list 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \+: first items \\
+\hline
+{\em b} & \+: second item \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 33 of file Library\+Mananagement\+System.\+cpp.
+
+
+\begin{DoxyCode}
+34 \{
+35     T t = *a;
+36     *a = *b;
+37     *b = t;
+38 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_library_mananagement_system_8cpp_a4ba67c6c5f6d58844eece44ff28f38f1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_library_mananagement_system_8cpp_abbfe09f5b391ad6e6bdb7b48338a54c6}\label{_library_mananagement_system_8cpp_abbfe09f5b391ad6e6bdb7b48338a54c6}} 
+\index{Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}!write\+Books\+To\+File@{write\+Books\+To\+File}}
+\index{write\+Books\+To\+File@{write\+Books\+To\+File}!Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}}
+\subsubsection{\texorpdfstring{write\+Books\+To\+File()}{writeBooksToFile()}}
+{\footnotesize\ttfamily void write\+Books\+To\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+function to write books\textquotesingle{} list to the book\textquotesingle{}s file 
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & name of the book\textquotesingle{}s file \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 159 of file Library\+Mananagement\+System.\+cpp.
+
+
+\begin{DoxyCode}
+159                        \{
+160 
+161     \textcolor{keyword}{remove}( \hyperlink{_library_mananagement_system_8cpp_a8f027f4595e84c5d1cbcf6997260d43f}{fileNameBooks}.c\_str() );
+162     \hyperlink{_library_mananagement_system_8cpp_acfcc0c04360431d24f658c2d38384701}{ouFileBook}.open(\hyperlink{_library_mananagement_system_8cpp_a8f027f4595e84c5d1cbcf6997260d43f}{fileNameBooks}, std::fstream::in | std::fstream::out | 
+      std::fstream::app);
+163     \hyperlink{_library_mananagement_system_8cpp_a2945b7618a199e1ba93546310a14a75a}{books}.\hyperlink{class_book_handler_a6794f0f693ff3048df64a5b254c183af}{printFile}( \hyperlink{_library_mananagement_system_8cpp_acfcc0c04360431d24f658c2d38384701}{ouFileBook});
+164     \hyperlink{_library_mananagement_system_8cpp_acfcc0c04360431d24f658c2d38384701}{ouFileBook}.close();
+165 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_library_mananagement_system_8cpp_abbfe09f5b391ad6e6bdb7b48338a54c6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_library_mananagement_system_8cpp_abbfe09f5b391ad6e6bdb7b48338a54c6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_library_mananagement_system_8cpp_a4553a1ae7185f7dfe1cf9d15b38ad35c}\label{_library_mananagement_system_8cpp_a4553a1ae7185f7dfe1cf9d15b38ad35c}} 
+\index{Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}!write\+Students\+To\+File@{write\+Students\+To\+File}}
+\index{write\+Students\+To\+File@{write\+Students\+To\+File}!Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}}
+\subsubsection{\texorpdfstring{write\+Students\+To\+File()}{writeStudentsToFile()}}
+{\footnotesize\ttfamily void write\+Students\+To\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+function to write students\textquotesingle{} list to the student\textquotesingle{}s file 
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & name of the student\textquotesingle{}s file \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 148 of file Library\+Mananagement\+System.\+cpp.
+
+
+\begin{DoxyCode}
+148                           \{
+149 
+150     \textcolor{keyword}{remove}( \hyperlink{_library_mananagement_system_8cpp_a5cab918573ca8bf696024b65579cbc06}{fileNameStudents}.c\_str() );
+151     \hyperlink{_library_mananagement_system_8cpp_a2e073350989a922d101f00447e52dfc6}{ouFileStudent}.open(\hyperlink{_library_mananagement_system_8cpp_a5cab918573ca8bf696024b65579cbc06}{fileNameStudents}, std::fstream::in | std::fstream::out 
+      | std::fstream::app);
+152     \hyperlink{_library_mananagement_system_8cpp_a35a6ce1dad360c87455a287284462c1a}{students}.\hyperlink{class_student_handler_a8049bb821d2a0a951600ab79c6ee4e27}{printFile}( \hyperlink{_library_mananagement_system_8cpp_a2e073350989a922d101f00447e52dfc6}{ouFileStudent});
+153     \hyperlink{_library_mananagement_system_8cpp_a2e073350989a922d101f00447e52dfc6}{ouFileStudent}.close();
+154 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_library_mananagement_system_8cpp_a4553a1ae7185f7dfe1cf9d15b38ad35c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_library_mananagement_system_8cpp_a4553a1ae7185f7dfe1cf9d15b38ad35c_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{_library_mananagement_system_8cpp_a2945b7618a199e1ba93546310a14a75a}\label{_library_mananagement_system_8cpp_a2945b7618a199e1ba93546310a14a75a}} 
+\index{Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}!books@{books}}
+\index{books@{books}!Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}}
+\subsubsection{\texorpdfstring{books}{books}}
+{\footnotesize\ttfamily \hyperlink{class_book_handler}{Book\+Handler} books}
+
+
+
+Definition at line 17 of file Library\+Mananagement\+System.\+cpp.
+
+\mbox{\Hypertarget{_library_mananagement_system_8cpp_a8f027f4595e84c5d1cbcf6997260d43f}\label{_library_mananagement_system_8cpp_a8f027f4595e84c5d1cbcf6997260d43f}} 
+\index{Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}!file\+Name\+Books@{file\+Name\+Books}}
+\index{file\+Name\+Books@{file\+Name\+Books}!Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}}
+\subsubsection{\texorpdfstring{file\+Name\+Books}{fileNameBooks}}
+{\footnotesize\ttfamily string file\+Name\+Books}
+
+
+
+Definition at line 23 of file Library\+Mananagement\+System.\+cpp.
+
+\mbox{\Hypertarget{_library_mananagement_system_8cpp_a5cab918573ca8bf696024b65579cbc06}\label{_library_mananagement_system_8cpp_a5cab918573ca8bf696024b65579cbc06}} 
+\index{Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}!file\+Name\+Students@{file\+Name\+Students}}
+\index{file\+Name\+Students@{file\+Name\+Students}!Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}}
+\subsubsection{\texorpdfstring{file\+Name\+Students}{fileNameStudents}}
+{\footnotesize\ttfamily string file\+Name\+Students}
+
+
+
+Definition at line 22 of file Library\+Mananagement\+System.\+cpp.
+
+\mbox{\Hypertarget{_library_mananagement_system_8cpp_abd9f2d9770f5fdcef61e9800deea25a5}\label{_library_mananagement_system_8cpp_abd9f2d9770f5fdcef61e9800deea25a5}} 
+\index{Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}!in\+File\+Book@{in\+File\+Book}}
+\index{in\+File\+Book@{in\+File\+Book}!Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}}
+\subsubsection{\texorpdfstring{in\+File\+Book}{inFileBook}}
+{\footnotesize\ttfamily ifstream in\+File\+Book}
+
+
+
+Definition at line 19 of file Library\+Mananagement\+System.\+cpp.
+
+\mbox{\Hypertarget{_library_mananagement_system_8cpp_a87ba0a10ae7ec7dcd3c5f6471c3dd0ad}\label{_library_mananagement_system_8cpp_a87ba0a10ae7ec7dcd3c5f6471c3dd0ad}} 
+\index{Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}!in\+File\+Student@{in\+File\+Student}}
+\index{in\+File\+Student@{in\+File\+Student}!Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}}
+\subsubsection{\texorpdfstring{in\+File\+Student}{inFileStudent}}
+{\footnotesize\ttfamily ifstream in\+File\+Student}
+
+
+
+Definition at line 18 of file Library\+Mananagement\+System.\+cpp.
+
+\mbox{\Hypertarget{_library_mananagement_system_8cpp_acfcc0c04360431d24f658c2d38384701}\label{_library_mananagement_system_8cpp_acfcc0c04360431d24f658c2d38384701}} 
+\index{Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}!ou\+File\+Book@{ou\+File\+Book}}
+\index{ou\+File\+Book@{ou\+File\+Book}!Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}}
+\subsubsection{\texorpdfstring{ou\+File\+Book}{ouFileBook}}
+{\footnotesize\ttfamily ofstream ou\+File\+Book}
+
+
+
+Definition at line 21 of file Library\+Mananagement\+System.\+cpp.
+
+\mbox{\Hypertarget{_library_mananagement_system_8cpp_a2e073350989a922d101f00447e52dfc6}\label{_library_mananagement_system_8cpp_a2e073350989a922d101f00447e52dfc6}} 
+\index{Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}!ou\+File\+Student@{ou\+File\+Student}}
+\index{ou\+File\+Student@{ou\+File\+Student}!Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}}
+\subsubsection{\texorpdfstring{ou\+File\+Student}{ouFileStudent}}
+{\footnotesize\ttfamily ofstream ou\+File\+Student}
+
+
+
+Definition at line 20 of file Library\+Mananagement\+System.\+cpp.
+
+\mbox{\Hypertarget{_library_mananagement_system_8cpp_a35a6ce1dad360c87455a287284462c1a}\label{_library_mananagement_system_8cpp_a35a6ce1dad360c87455a287284462c1a}} 
+\index{Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}!students@{students}}
+\index{students@{students}!Library\+Mananagement\+System.\+cpp@{Library\+Mananagement\+System.\+cpp}}
+\subsubsection{\texorpdfstring{students}{students}}
+{\footnotesize\ttfamily \hyperlink{class_student_handler}{Student\+Handler} students}
+
+
+
+Definition at line 16 of file Library\+Mananagement\+System.\+cpp.
+

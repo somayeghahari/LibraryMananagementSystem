@@ -1,0 +1,232 @@
+\hypertarget{class_binary_tree}{}\section{Binary\+Tree$<$ Type $>$ Class Template Reference}
+\label{class_binary_tree}\index{Binary\+Tree$<$ Type $>$@{Binary\+Tree$<$ Type $>$}}
+
+
+{\ttfamily \#include $<$Binary\+Tree.\+h$>$}
+
+
+
+Collaboration diagram for Binary\+Tree$<$ Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{class_binary_tree__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_binary_tree_a9f5a2d791e391c6195ef290303973e15}{Binary\+Tree} ()
+\item 
+virtual \hyperlink{class_binary_tree_a2bad873a7fc094d66a3076a86d11c428}{$\sim$\+Binary\+Tree} ()
+\item 
+void \hyperlink{class_binary_tree_a69ae782d438253d40cbd194737feca17}{insert\+Node} (Type $\ast$data)
+\item 
+const \hyperlink{class_node}{Node}$<$ Type $>$ $\ast$ \hyperlink{class_binary_tree_a9ee0cf09781cf2ecc471aacc61848dde}{get\+Root} () const
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_binary_tree_a9b20827d019844170bb09465f885fef4}{destroy} (\hyperlink{class_node}{Node}$<$ Type $>$ $\ast$tmp)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_node}{Node}$<$ Type $>$ $\ast$ \hyperlink{class_binary_tree_a8744322abfc99966f7d23d8560ed5702}{root}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Type$>$\newline
+class Binary\+Tree$<$ Type $>$}
+
+Generic class \hyperlink{class_binary_tree}{Binary\+Tree} defines the binary tree 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Type} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 54 of file Binary\+Tree.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_binary_tree_a9f5a2d791e391c6195ef290303973e15}\label{class_binary_tree_a9f5a2d791e391c6195ef290303973e15}} 
+\index{Binary\+Tree@{Binary\+Tree}!Binary\+Tree@{Binary\+Tree}}
+\index{Binary\+Tree@{Binary\+Tree}!Binary\+Tree@{Binary\+Tree}}
+\subsubsection{\texorpdfstring{Binary\+Tree()}{BinaryTree()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+\hyperlink{class_binary_tree}{Binary\+Tree}$<$ Type $>$\+::\hyperlink{class_binary_tree}{Binary\+Tree} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+constructor function 
+
+Definition at line 59 of file Binary\+Tree.\+h.
+
+
+\begin{DoxyCode}
+59                 \{
+60         \hyperlink{class_binary_tree_a8744322abfc99966f7d23d8560ed5702}{root} = 0;
+61     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_binary_tree_a2bad873a7fc094d66a3076a86d11c428}\label{class_binary_tree_a2bad873a7fc094d66a3076a86d11c428}} 
+\index{Binary\+Tree@{Binary\+Tree}!````~Binary\+Tree@{$\sim$\+Binary\+Tree}}
+\index{````~Binary\+Tree@{$\sim$\+Binary\+Tree}!Binary\+Tree@{Binary\+Tree}}
+\subsubsection{\texorpdfstring{$\sim$\+Binary\+Tree()}{~BinaryTree()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+virtual \hyperlink{class_binary_tree}{Binary\+Tree}$<$ Type $>$\+::$\sim$\hyperlink{class_binary_tree}{Binary\+Tree} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+destructor function deletes the nodes in the tree and destroys the tree 
+
+Definition at line 66 of file Binary\+Tree.\+h.
+
+
+\begin{DoxyCode}
+66                          \{
+67         \hyperlink{class_binary_tree_a9b20827d019844170bb09465f885fef4}{destroy}(\hyperlink{class_binary_tree_a8744322abfc99966f7d23d8560ed5702}{root});
+68     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_binary_tree_a9b20827d019844170bb09465f885fef4}\label{class_binary_tree_a9b20827d019844170bb09465f885fef4}} 
+\index{Binary\+Tree@{Binary\+Tree}!destroy@{destroy}}
+\index{destroy@{destroy}!Binary\+Tree@{Binary\+Tree}}
+\subsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+void \hyperlink{class_binary_tree}{Binary\+Tree}$<$ Type $>$\+::destroy (\begin{DoxyParamCaption}\item[{\hyperlink{class_node}{Node}$<$ Type $>$ $\ast$}]{tmp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+function to destroy the binary tree 
+\begin{DoxyParams}{Parameters}
+{\em tmp} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 123 of file Binary\+Tree.\+h.
+
+
+\begin{DoxyCode}
+123                                   \{
+124         \textcolor{keywordflow}{if} (tmp != NULL)    \{
+125             \hyperlink{class_binary_tree_a9b20827d019844170bb09465f885fef4}{destroy}(tmp->\hyperlink{class_node_abb08a8b3137dd8fc8874348a439e01b4}{left});
+126             tmp->\hyperlink{class_node_abb08a8b3137dd8fc8874348a439e01b4}{left} = NULL;
+127             \hyperlink{class_binary_tree_a9b20827d019844170bb09465f885fef4}{destroy}(tmp->\hyperlink{class_node_a34452c0684d3cb1590406ad201b43e65}{right});
+128             tmp->\hyperlink{class_node_a34452c0684d3cb1590406ad201b43e65}{right} = NULL;
+129             \textcolor{keyword}{delete} tmp;
+130         \}
+131     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_binary_tree_a9ee0cf09781cf2ecc471aacc61848dde}\label{class_binary_tree_a9ee0cf09781cf2ecc471aacc61848dde}} 
+\index{Binary\+Tree@{Binary\+Tree}!get\+Root@{get\+Root}}
+\index{get\+Root@{get\+Root}!Binary\+Tree@{Binary\+Tree}}
+\subsubsection{\texorpdfstring{get\+Root()}{getRoot()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+const \hyperlink{class_node}{Node}$<$Type$>$$\ast$ \hyperlink{class_binary_tree}{Binary\+Tree}$<$ Type $>$\+::get\+Root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+function to return root of the binary tree \begin{DoxyReturn}{Returns}
+root of the binary tree 
+\end{DoxyReturn}
+
+
+Definition at line 114 of file Binary\+Tree.\+h.
+
+
+\begin{DoxyCode}
+114                                       \{
+115         \textcolor{keywordflow}{return} \hyperlink{class_binary_tree_a8744322abfc99966f7d23d8560ed5702}{root};
+116     \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_binary_tree_a9ee0cf09781cf2ecc471aacc61848dde_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_binary_tree_a69ae782d438253d40cbd194737feca17}\label{class_binary_tree_a69ae782d438253d40cbd194737feca17}} 
+\index{Binary\+Tree@{Binary\+Tree}!insert\+Node@{insert\+Node}}
+\index{insert\+Node@{insert\+Node}!Binary\+Tree@{Binary\+Tree}}
+\subsubsection{\texorpdfstring{insert\+Node()}{insertNode()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+void \hyperlink{class_binary_tree}{Binary\+Tree}$<$ Type $>$\+::insert\+Node (\begin{DoxyParamCaption}\item[{Type $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+function to insert a new node to the binary tree 
+\begin{DoxyParams}{Parameters}
+{\em data} & generic data of new node \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 73 of file Binary\+Tree.\+h.
+
+
+\begin{DoxyCode}
+73                                  \{
+74         \hyperlink{class_node}{Node <Type>} * temp = \textcolor{keyword}{new} \hyperlink{class_node}{Node<Type>}(data);
+75 
+76         \textcolor{keywordflow}{if}(\hyperlink{class_binary_tree_a8744322abfc99966f7d23d8560ed5702}{root} == 0)\{
+77             \hyperlink{class_binary_tree_a8744322abfc99966f7d23d8560ed5702}{root} = temp;
+78             \textcolor{keywordflow}{return};
+79         \}
+80         \textcolor{keywordflow}{else} \{
+81             \hyperlink{classqueue_l_l}{queueLL<Node <Type>}> * queue = \textcolor{keyword}{new} 
+      \hyperlink{classqueue_l_l}{queueLL<Node <Type>}>();
+82             \textcolor{comment}{//Add root to the queue}
+83             queue->\hyperlink{classqueue_l_l_adcbcc26433da2c9d17b6cf0802d1d7d2}{add}(\hyperlink{class_binary_tree_a8744322abfc99966f7d23d8560ed5702}{root});
+84 
+85             \textcolor{keywordflow}{while}(\textcolor{keyword}{true}) \{
+86                 \hyperlink{class_node}{Node<Type>} * n = queue->\hyperlink{classqueue_l_l_a4204a9db973b69be5824ca2495130b40}{remove}();
+87                 \textcolor{keywordflow}{if}(n!=0)\{
+88                     \textcolor{keywordflow}{if}(n->\hyperlink{class_node_abb08a8b3137dd8fc8874348a439e01b4}{left} != 0 && n->\hyperlink{class_node_a34452c0684d3cb1590406ad201b43e65}{right} != 0) \{
+89                         queue->\hyperlink{classqueue_l_l_adcbcc26433da2c9d17b6cf0802d1d7d2}{add}(n->\hyperlink{class_node_abb08a8b3137dd8fc8874348a439e01b4}{left});
+90                         queue->\hyperlink{classqueue_l_l_adcbcc26433da2c9d17b6cf0802d1d7d2}{add}(n->\hyperlink{class_node_a34452c0684d3cb1590406ad201b43e65}{right});
+91                     \}
+92                     \textcolor{keywordflow}{else} \{
+93                         \textcolor{keywordflow}{if}(n->\hyperlink{class_node_abb08a8b3137dd8fc8874348a439e01b4}{left} == 0) \{
+94                          n->\hyperlink{class_node_abb08a8b3137dd8fc8874348a439e01b4}{left} = temp;
+95                          queue->\hyperlink{classqueue_l_l_adcbcc26433da2c9d17b6cf0802d1d7d2}{add}(n->\hyperlink{class_node_abb08a8b3137dd8fc8874348a439e01b4}{left});
+96                         \}
+97                         \textcolor{comment}{//If node has left child but no right child, make newNode as right child}
+98                         \textcolor{keywordflow}{else} \{
+99                          n->\hyperlink{class_node_a34452c0684d3cb1590406ad201b43e65}{right} = temp;
+100                          queue->\hyperlink{classqueue_l_l_adcbcc26433da2c9d17b6cf0802d1d7d2}{add}(n->\hyperlink{class_node_a34452c0684d3cb1590406ad201b43e65}{right});
+101                         \}
+102                         \textcolor{keywordflow}{break};
+103                     \}
+104                     \textcolor{comment}{//delete(n);}
+105                 \}
+106             \}
+107             \textcolor{keyword}{delete}(queue);
+108         \}
+109     \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_binary_tree_a69ae782d438253d40cbd194737feca17_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_binary_tree_a8744322abfc99966f7d23d8560ed5702}\label{class_binary_tree_a8744322abfc99966f7d23d8560ed5702}} 
+\index{Binary\+Tree@{Binary\+Tree}!root@{root}}
+\index{root@{root}!Binary\+Tree@{Binary\+Tree}}
+\subsubsection{\texorpdfstring{root}{root}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+\hyperlink{class_node}{Node}$<$Type$>$$\ast$ \hyperlink{class_binary_tree}{Binary\+Tree}$<$ Type $>$\+::root\hspace{0.3cm}{\ttfamily [private]}}
+
+root of the the binary tree 
+
+Definition at line 136 of file Binary\+Tree.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_binary_tree_8h}{Binary\+Tree.\+h}\end{DoxyCompactItemize}

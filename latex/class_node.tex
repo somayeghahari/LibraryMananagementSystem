@@ -1,0 +1,132 @@
+\hypertarget{class_node}{}\section{Node$<$ Type $>$ Class Template Reference}
+\label{class_node}\index{Node$<$ Type $>$@{Node$<$ Type $>$}}
+
+
+{\ttfamily \#include $<$Binary\+Tree.\+h$>$}
+
+
+
+Collaboration diagram for Node$<$ Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{class_node__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_node_a238d6ebbae88f5a39daf8f31ff409164}{Node} (Type $\ast$\hyperlink{class_node_a8b322cc3cc17b752eb77533493713ddd}{data})
+\item 
+\hyperlink{class_node_ab27bbe294970f98f26b5d548dfbb50ca}{Node} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Type $\ast$ \hyperlink{class_node_a8b322cc3cc17b752eb77533493713ddd}{data}
+\item 
+\hyperlink{class_node}{Node} $\ast$ \hyperlink{class_node_abb08a8b3137dd8fc8874348a439e01b4}{left}
+\item 
+\hyperlink{class_node}{Node} $\ast$ \hyperlink{class_node_a34452c0684d3cb1590406ad201b43e65}{right}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Type$>$\newline
+class Node$<$ Type $>$}
+
+Generic class \hyperlink{class_node}{Node} is the node of the binary tree 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Type} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 18 of file Binary\+Tree.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_node_a238d6ebbae88f5a39daf8f31ff409164}\label{class_node_a238d6ebbae88f5a39daf8f31ff409164}} 
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection{\texorpdfstring{Node()}{Node()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+\hyperlink{class_node}{Node}$<$ Type $>$\+::\hyperlink{class_node}{Node} (\begin{DoxyParamCaption}\item[{Type $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+constructor function 
+\begin{DoxyParams}{Parameters}
+{\em data} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 24 of file Binary\+Tree.\+h.
+
+
+\begin{DoxyCode}
+24                      \{
+25         this->\hyperlink{class_node_a8b322cc3cc17b752eb77533493713ddd}{data} = \hyperlink{class_node_a8b322cc3cc17b752eb77533493713ddd}{data};
+26         \hyperlink{class_node_abb08a8b3137dd8fc8874348a439e01b4}{left} = \hyperlink{class_node_a34452c0684d3cb1590406ad201b43e65}{right} = 0;
+27     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_node_ab27bbe294970f98f26b5d548dfbb50ca}\label{class_node_ab27bbe294970f98f26b5d548dfbb50ca}} 
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection{\texorpdfstring{Node()}{Node()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+\hyperlink{class_node}{Node}$<$ Type $>$\+::\hyperlink{class_node}{Node} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+constructor function 
+
+Definition at line 31 of file Binary\+Tree.\+h.
+
+
+\begin{DoxyCode}
+31           \{
+32         this->\hyperlink{class_node_a8b322cc3cc17b752eb77533493713ddd}{data} = 0;
+33         \hyperlink{class_node_abb08a8b3137dd8fc8874348a439e01b4}{left} = \hyperlink{class_node_a34452c0684d3cb1590406ad201b43e65}{right} = 0;
+34     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_node_a8b322cc3cc17b752eb77533493713ddd}\label{class_node_a8b322cc3cc17b752eb77533493713ddd}} 
+\index{Node@{Node}!data@{data}}
+\index{data@{data}!Node@{Node}}
+\subsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+Type$\ast$ \hyperlink{class_node}{Node}$<$ Type $>$\+::data}
+
+data of \hyperlink{class_node}{Node} 
+
+Definition at line 38 of file Binary\+Tree.\+h.
+
+\mbox{\Hypertarget{class_node_abb08a8b3137dd8fc8874348a439e01b4}\label{class_node_abb08a8b3137dd8fc8874348a439e01b4}} 
+\index{Node@{Node}!left@{left}}
+\index{left@{left}!Node@{Node}}
+\subsubsection{\texorpdfstring{left}{left}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+\hyperlink{class_node}{Node}$\ast$ \hyperlink{class_node}{Node}$<$ Type $>$\+::left}
+
+left pointer of \hyperlink{class_node}{Node} 
+
+Definition at line 42 of file Binary\+Tree.\+h.
+
+\mbox{\Hypertarget{class_node_a34452c0684d3cb1590406ad201b43e65}\label{class_node_a34452c0684d3cb1590406ad201b43e65}} 
+\index{Node@{Node}!right@{right}}
+\index{right@{right}!Node@{Node}}
+\subsubsection{\texorpdfstring{right}{right}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+\hyperlink{class_node}{Node}$\ast$ \hyperlink{class_node}{Node}$<$ Type $>$\+::right}
+
+right pointer of \hyperlink{class_node}{Node} 
+
+Definition at line 46 of file Binary\+Tree.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_binary_tree_8h}{Binary\+Tree.\+h}\end{DoxyCompactItemize}

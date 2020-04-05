@@ -1,0 +1,129 @@
+\hypertarget{classqueue_l_l_node}{}\section{queue\+L\+L\+Node$<$ Type $>$ Class Template Reference}
+\label{classqueue_l_l_node}\index{queue\+L\+L\+Node$<$ Type $>$@{queue\+L\+L\+Node$<$ Type $>$}}
+
+
+{\ttfamily \#include $<$Queue\+L\+L.\+h$>$}
+
+
+
+Collaboration diagram for queue\+L\+L\+Node$<$ Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{classqueue_l_l_node__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classqueue_l_l_node_a52a32e9e79f0b6cedeec1b9e68589354}{queue\+L\+L\+Node} (Type $\ast$\hyperlink{classqueue_l_l_node_a20b1170d8c5852b7dc01e56fda4e4206}{data})
+\item 
+void \hyperlink{classqueue_l_l_node_ac264831406ec126a6ece6b5522d89dcd}{set\+Node} (Type $\ast$\hyperlink{classqueue_l_l_node_a20b1170d8c5852b7dc01e56fda4e4206}{data}, \hyperlink{classqueue_l_l_node}{queue\+L\+L\+Node} $\ast$\hyperlink{classqueue_l_l_node_ab8367d61c51828d9f21d72537b62735f}{next})
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Type $\ast$ \hyperlink{classqueue_l_l_node_a20b1170d8c5852b7dc01e56fda4e4206}{data}
+\item 
+\hyperlink{classqueue_l_l_node}{queue\+L\+L\+Node} $\ast$ \hyperlink{classqueue_l_l_node_ab8367d61c51828d9f21d72537b62735f}{next}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Type$>$\newline
+class queue\+L\+L\+Node$<$ Type $>$}
+
+Generic class \hyperlink{classqueue_l_l_node}{queue\+L\+L\+Node} is the node of the queue class 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Type} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 18 of file Queue\+L\+L.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classqueue_l_l_node_a52a32e9e79f0b6cedeec1b9e68589354}\label{classqueue_l_l_node_a52a32e9e79f0b6cedeec1b9e68589354}} 
+\index{queue\+L\+L\+Node@{queue\+L\+L\+Node}!queue\+L\+L\+Node@{queue\+L\+L\+Node}}
+\index{queue\+L\+L\+Node@{queue\+L\+L\+Node}!queue\+L\+L\+Node@{queue\+L\+L\+Node}}
+\subsubsection{\texorpdfstring{queue\+L\+L\+Node()}{queueLLNode()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+\hyperlink{classqueue_l_l_node}{queue\+L\+L\+Node}$<$ Type $>$\+::\hyperlink{classqueue_l_l_node}{queue\+L\+L\+Node} (\begin{DoxyParamCaption}\item[{Type $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+constructor function 
+\begin{DoxyParams}{Parameters}
+{\em data} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 24 of file Queue\+L\+L.\+h.
+
+
+\begin{DoxyCode}
+24                              \{
+25         this->\hyperlink{classqueue_l_l_node_a20b1170d8c5852b7dc01e56fda4e4206}{data} = \hyperlink{classqueue_l_l_node_a20b1170d8c5852b7dc01e56fda4e4206}{data};
+26         this->\hyperlink{classqueue_l_l_node_ab8367d61c51828d9f21d72537b62735f}{next} = 0;
+27     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classqueue_l_l_node_ac264831406ec126a6ece6b5522d89dcd}\label{classqueue_l_l_node_ac264831406ec126a6ece6b5522d89dcd}} 
+\index{queue\+L\+L\+Node@{queue\+L\+L\+Node}!set\+Node@{set\+Node}}
+\index{set\+Node@{set\+Node}!queue\+L\+L\+Node@{queue\+L\+L\+Node}}
+\subsubsection{\texorpdfstring{set\+Node()}{setNode()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+void \hyperlink{classqueue_l_l_node}{queue\+L\+L\+Node}$<$ Type $>$\+::set\+Node (\begin{DoxyParamCaption}\item[{Type $\ast$}]{data,  }\item[{\hyperlink{classqueue_l_l_node}{queue\+L\+L\+Node}$<$ Type $>$ $\ast$}]{next }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+function to set data and next pointer of the node 
+\begin{DoxyParams}{Parameters}
+{\em data} & data of the node with generic type \\
+\hline
+{\em next} & pointer to the next node \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 33 of file Queue\+L\+L.\+h.
+
+
+\begin{DoxyCode}
+33                                                   \{
+34         this->\hyperlink{classqueue_l_l_node_a20b1170d8c5852b7dc01e56fda4e4206}{data} = \hyperlink{classqueue_l_l_node_a20b1170d8c5852b7dc01e56fda4e4206}{data};
+35         this->next = \hyperlink{classqueue_l_l_node_ab8367d61c51828d9f21d72537b62735f}{next};
+36     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classqueue_l_l_node_a20b1170d8c5852b7dc01e56fda4e4206}\label{classqueue_l_l_node_a20b1170d8c5852b7dc01e56fda4e4206}} 
+\index{queue\+L\+L\+Node@{queue\+L\+L\+Node}!data@{data}}
+\index{data@{data}!queue\+L\+L\+Node@{queue\+L\+L\+Node}}
+\subsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+Type$\ast$ \hyperlink{classqueue_l_l_node}{queue\+L\+L\+Node}$<$ Type $>$\+::data}
+
+data of the node 
+
+Definition at line 40 of file Queue\+L\+L.\+h.
+
+\mbox{\Hypertarget{classqueue_l_l_node_ab8367d61c51828d9f21d72537b62735f}\label{classqueue_l_l_node_ab8367d61c51828d9f21d72537b62735f}} 
+\index{queue\+L\+L\+Node@{queue\+L\+L\+Node}!next@{next}}
+\index{next@{next}!queue\+L\+L\+Node@{queue\+L\+L\+Node}}
+\subsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+\hyperlink{classqueue_l_l_node}{queue\+L\+L\+Node}$\ast$ \hyperlink{classqueue_l_l_node}{queue\+L\+L\+Node}$<$ Type $>$\+::next}
+
+pointer to the next node 
+
+Definition at line 44 of file Queue\+L\+L.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_queue_l_l_8h}{Queue\+L\+L.\+h}\end{DoxyCompactItemize}

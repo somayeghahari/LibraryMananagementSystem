@@ -1,0 +1,536 @@
+\hypertarget{classstudent}{}\section{student Class Reference}
+\label{classstudent}\index{student@{student}}
+
+
+{\ttfamily \#include $<$Student.\+h$>$}
+
+
+
+Collaboration diagram for student\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classstudent__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classstudent_a12856a6274dafe06723815e464b6a336}{student} (int i, std\+::string n)
+\item 
+\hyperlink{classstudent_a9614bbb1bed8ee2aea8aab60fe58494b}{student} ()
+\item 
+virtual \hyperlink{classstudent_a102d321793438dd827305764bf59f86c}{$\sim$student} ()
+\item 
+\hyperlink{classqueue_l_l}{queue\+LL}$<$ \hyperlink{classbook}{book} $>$ $\ast$ \hyperlink{classstudent_a27120d590ee93cc80c5b9d72d91a2eb3}{get\+Borrowed\+Books} () const
+\item 
+int \hyperlink{classstudent_a718b1fdd02dd1ed06110f9e0e7ec7720}{get\+Id} () const
+\item 
+void \hyperlink{classstudent_abda32701d8741f07e9aa45d339a122ff}{set\+Id} (int \hyperlink{classstudent_a8215d11b0d1adc77e0808a0ff4d0f6a2}{id})
+\item 
+const std\+::string \& \hyperlink{classstudent_aeeeae15e9a049b1e0973f91bd55fd78b}{get\+Name} () const
+\item 
+void \hyperlink{classstudent_a9e5279d275d68557215edd499c15b0a2}{set\+Name} (const std\+::string \&\hyperlink{classstudent_a8bba46a454eaecf8619a68c4c38c7b8d}{name})
+\item 
+void \hyperlink{classstudent_af02c927727b890c189a4641f01185bcc}{add\+Borrowed\+Book} (\hyperlink{classbook}{book} $\ast$item)
+\item 
+void \hyperlink{classstudent_ab98c4cb9d85152c3abd2b5d4255b8271}{remove\+Borrowed\+Book} ()
+\item 
+void \hyperlink{classstudent_a5387f0131233065383ca141ddec50de6}{remove\+Borrowed\+Book\+Atindex} (int index)
+\item 
+bool \hyperlink{classstudent_a73c407020ea392b45dc9ff9babc0850b}{parse\+Line} (std\+::string \&line, \hyperlink{class_book_handler}{Book\+Handler} \&\hyperlink{_library_mananagement_system_8cpp_a2945b7618a199e1ba93546310a14a75a}{books})
+\item 
+void \hyperlink{classstudent_a4bc363a59fc8b14d81e8e5e0d2326444}{create\+Line} (std\+::string \&line)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classstudent_a8215d11b0d1adc77e0808a0ff4d0f6a2}{id}
+\item 
+std\+::string \hyperlink{classstudent_a8bba46a454eaecf8619a68c4c38c7b8d}{name}
+\item 
+\hyperlink{classqueue_l_l}{queue\+LL}$<$ \hyperlink{classbook}{book} $>$ $\ast$ \hyperlink{classstudent_ab477f6c1525709586ea41364dc8c568b}{borrowed\+Books}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{classstudent_a73f5ef786ecabf4118c6606f42829606}{operator$<$$<$} (std\+::ostream \&out, const \hyperlink{classstudent}{student} \&st)
+\item 
+bool \hyperlink{classstudent_aaaddafca542c39f7442b1807ba5600c3}{operator!=} (const \hyperlink{classstudent}{student} \&s1, const \hyperlink{classstudent}{student} \&s2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class book shows all the functions and members of a student 
+
+Definition at line 21 of file Student.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstudent_a12856a6274dafe06723815e464b6a336}\label{classstudent_a12856a6274dafe06723815e464b6a336}} 
+\index{student@{student}!student@{student}}
+\index{student@{student}!student@{student}}
+\subsubsection{\texorpdfstring{student()}{student()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily student\+::student (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{std\+::string}]{n }\end{DoxyParamCaption})}
+
+constructor function 
+
+Definition at line 11 of file Student.\+cpp.
+
+
+\begin{DoxyCode}
+11                                      \{
+12     \textcolor{keywordtype}{id} = i;
+13     \hyperlink{classstudent_a8bba46a454eaecf8619a68c4c38c7b8d}{name} =  n;
+14     \hyperlink{classstudent_ab477f6c1525709586ea41364dc8c568b}{borrowedBooks} = \textcolor{keyword}{new} \hyperlink{classqueue_l_l}{queueLL<book>}();
+15 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classstudent_a9614bbb1bed8ee2aea8aab60fe58494b}\label{classstudent_a9614bbb1bed8ee2aea8aab60fe58494b}} 
+\index{student@{student}!student@{student}}
+\index{student@{student}!student@{student}}
+\subsubsection{\texorpdfstring{student()}{student()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily student\+::student (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+constructor function 
+
+Definition at line 17 of file Student.\+cpp.
+
+
+\begin{DoxyCode}
+17                   \{
+18     \textcolor{keywordtype}{id} = 0;
+19     \hyperlink{classstudent_a8bba46a454eaecf8619a68c4c38c7b8d}{name} =  \textcolor{stringliteral}{" "};
+20     \hyperlink{classstudent_ab477f6c1525709586ea41364dc8c568b}{borrowedBooks} = \textcolor{keyword}{new} \hyperlink{classqueue_l_l}{queueLL<book>}();
+21 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classstudent_a102d321793438dd827305764bf59f86c}\label{classstudent_a102d321793438dd827305764bf59f86c}} 
+\index{student@{student}!````~student@{$\sim$student}}
+\index{````~student@{$\sim$student}!student@{student}}
+\subsubsection{\texorpdfstring{$\sim$student()}{~student()}}
+{\footnotesize\ttfamily student\+::$\sim$student (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+destructor function 
+
+Definition at line 23 of file Student.\+cpp.
+
+
+\begin{DoxyCode}
+23                   \{
+24     \textcolor{keyword}{delete}(\hyperlink{classstudent_ab477f6c1525709586ea41364dc8c568b}{borrowedBooks});
+25 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classstudent_af02c927727b890c189a4641f01185bcc}\label{classstudent_af02c927727b890c189a4641f01185bcc}} 
+\index{student@{student}!add\+Borrowed\+Book@{add\+Borrowed\+Book}}
+\index{add\+Borrowed\+Book@{add\+Borrowed\+Book}!student@{student}}
+\subsubsection{\texorpdfstring{add\+Borrowed\+Book()}{addBorrowedBook()}}
+{\footnotesize\ttfamily void student\+::add\+Borrowed\+Book (\begin{DoxyParamCaption}\item[{\hyperlink{classbook}{book} $\ast$}]{item }\end{DoxyParamCaption})}
+
+function adds a book to the queue of the borrowed books 
+\begin{DoxyParams}{Parameters}
+{\em item} & pointer to the book \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 31 of file Student.\+cpp.
+
+
+\begin{DoxyCode}
+31                                         \{
+32     \hyperlink{classstudent_ab477f6c1525709586ea41364dc8c568b}{borrowedBooks}->\hyperlink{classqueue_l_l_adcbcc26433da2c9d17b6cf0802d1d7d2}{add}(item);
+33 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{classstudent_af02c927727b890c189a4641f01185bcc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classstudent_af02c927727b890c189a4641f01185bcc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classstudent_a4bc363a59fc8b14d81e8e5e0d2326444}\label{classstudent_a4bc363a59fc8b14d81e8e5e0d2326444}} 
+\index{student@{student}!create\+Line@{create\+Line}}
+\index{create\+Line@{create\+Line}!student@{student}}
+\subsubsection{\texorpdfstring{create\+Line()}{createLine()}}
+{\footnotesize\ttfamily void student\+::create\+Line (\begin{DoxyParamCaption}\item[{std\+::string \&}]{line }\end{DoxyParamCaption})}
+
+function to create line for file 
+\begin{DoxyParams}{Parameters}
+{\em line} & line that is supposed to write to file \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 111 of file Student.\+cpp.
+
+
+\begin{DoxyCode}
+111                                         \{
+112 
+113         line = std::to\_string(\textcolor{keywordtype}{id}) + \textcolor{stringliteral}{","} + \hyperlink{classstudent_a8bba46a454eaecf8619a68c4c38c7b8d}{name} + \textcolor{stringliteral}{","} ;
+114         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\hyperlink{classstudent_ab477f6c1525709586ea41364dc8c568b}{borrowedBooks}->\hyperlink{classqueue_l_l_a8969feebcb563f0b489bc112422b9563}{getSize}();i++)\{
+115             std::string s;
+116             \hyperlink{classstudent_ab477f6c1525709586ea41364dc8c568b}{borrowedBooks}->\hyperlink{classqueue_l_l_a6c8873be0f08b3b2e83a24469fbfaa5d}{atIndex}(i)->\hyperlink{classqueue_l_l_node_a20b1170d8c5852b7dc01e56fda4e4206}{data}->\hyperlink{classbook_aea835c54459ec0a4d29d42f2f6f7858d}{createLine}(s);
+117             line.append(s);
+118             line.append(\textcolor{stringliteral}{"*"});
+119         \}
+120 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classstudent_a4bc363a59fc8b14d81e8e5e0d2326444_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classstudent_a4bc363a59fc8b14d81e8e5e0d2326444_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classstudent_a27120d590ee93cc80c5b9d72d91a2eb3}\label{classstudent_a27120d590ee93cc80c5b9d72d91a2eb3}} 
+\index{student@{student}!get\+Borrowed\+Books@{get\+Borrowed\+Books}}
+\index{get\+Borrowed\+Books@{get\+Borrowed\+Books}!student@{student}}
+\subsubsection{\texorpdfstring{get\+Borrowed\+Books()}{getBorrowedBooks()}}
+{\footnotesize\ttfamily \hyperlink{classqueue_l_l}{queue\+LL}$<$ \hyperlink{classbook}{book} $>$ $\ast$ student\+::get\+Borrowed\+Books (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+function returns queue of the borrowed books \begin{DoxyReturn}{Returns}
+queue of the borrowed books 
+\end{DoxyReturn}
+
+
+Definition at line 27 of file Student.\+cpp.
+
+
+\begin{DoxyCode}
+27                                                \{
+28     \textcolor{keywordflow}{return} \hyperlink{classstudent_ab477f6c1525709586ea41364dc8c568b}{borrowedBooks};
+29 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classstudent_a27120d590ee93cc80c5b9d72d91a2eb3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classstudent_a718b1fdd02dd1ed06110f9e0e7ec7720}\label{classstudent_a718b1fdd02dd1ed06110f9e0e7ec7720}} 
+\index{student@{student}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!student@{student}}
+\subsubsection{\texorpdfstring{get\+Id()}{getId()}}
+{\footnotesize\ttfamily int student\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+function returns student id \begin{DoxyReturn}{Returns}
+student id 
+\end{DoxyReturn}
+
+
+Definition at line 47 of file Student.\+cpp.
+
+
+\begin{DoxyCode}
+47                          \{
+48     \textcolor{keywordflow}{return} \hyperlink{classstudent_a8215d11b0d1adc77e0808a0ff4d0f6a2}{id};
+49 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classstudent_a718b1fdd02dd1ed06110f9e0e7ec7720_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classstudent_aeeeae15e9a049b1e0973f91bd55fd78b}\label{classstudent_aeeeae15e9a049b1e0973f91bd55fd78b}} 
+\index{student@{student}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!student@{student}}
+\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
+{\footnotesize\ttfamily const std\+::string \& student\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+function returns student name \begin{DoxyReturn}{Returns}
+student name 
+\end{DoxyReturn}
+
+
+Definition at line 55 of file Student.\+cpp.
+
+
+\begin{DoxyCode}
+55                                         \{
+56     \textcolor{keywordflow}{return} \hyperlink{classstudent_a8bba46a454eaecf8619a68c4c38c7b8d}{name};
+57 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classstudent_a73c407020ea392b45dc9ff9babc0850b}\label{classstudent_a73c407020ea392b45dc9ff9babc0850b}} 
+\index{student@{student}!parse\+Line@{parse\+Line}}
+\index{parse\+Line@{parse\+Line}!student@{student}}
+\subsubsection{\texorpdfstring{parse\+Line()}{parseLine()}}
+{\footnotesize\ttfamily bool student\+::parse\+Line (\begin{DoxyParamCaption}\item[{std\+::string \&}]{line,  }\item[{\hyperlink{class_book_handler}{Book\+Handler} \&}]{books }\end{DoxyParamCaption})}
+
+function to parse line from file 
+\begin{DoxyParams}{Parameters}
+{\em line} & line that is read from file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, if parse is successful 
+\end{DoxyReturn}
+
+
+Definition at line 80 of file Student.\+cpp.
+
+
+\begin{DoxyCode}
+80                                                             \{
+81     \textcolor{keywordtype}{bool} result = \textcolor{keyword}{false};
+82 
+83     std::stringstream check1(line);
+84     std::string intermediate;
+85 
+86     \textcolor{keywordflow}{if}(std::getline(check1, intermediate, \textcolor{charliteral}{','}))\{\textcolor{comment}{//id}
+87 
+88         \textcolor{keywordtype}{id} =  std::stoi(intermediate);
+89             \textcolor{keywordflow}{if}(std::getline(check1, intermediate, \textcolor{charliteral}{','}))\{\textcolor{comment}{//name}
+90             \hyperlink{classstudent_a8bba46a454eaecf8619a68c4c38c7b8d}{name} = intermediate;
+91             result = \textcolor{keyword}{true};
+92             std::vector <std::string> tokens;
+93             \textcolor{keywordflow}{while}(getline(check1, intermediate, \textcolor{charliteral}{'*'}))\{\textcolor{comment}{//borrowedbooks}
+94                 tokens.push\_back(intermediate);
+95             \}
+96             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < tokens.size(); i++)\{
+97                 \hyperlink{classbook}{book} * b = \textcolor{keyword}{new} \hyperlink{classbook}{book}();
+98                 b->\hyperlink{classbook_acf51be6cb1a1e98d461144e134583c8f}{parseLine}(tokens[i]);
+99                 \hyperlink{classbook}{book} * fBook = books.\hyperlink{class_book_handler_aab461b060b38d51586ed043143b4bc68}{findBook}(*b);
+100                 \textcolor{keywordflow}{if}(fBook== NULL)\{
+101                     std::cout<<\textcolor{stringliteral}{"BOOK ID NOT FOUND!\(\backslash\)n"};
+102                 \}
+103                 \hyperlink{classstudent_ab477f6c1525709586ea41364dc8c568b}{borrowedBooks}->\hyperlink{classqueue_l_l_adcbcc26433da2c9d17b6cf0802d1d7d2}{add}(fBook);
+104                 \textcolor{keyword}{delete}(b);
+105             \}
+106         \}
+107     \}
+108     \textcolor{keywordflow}{return} result;
+109 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classstudent_a73c407020ea392b45dc9ff9babc0850b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classstudent_a73c407020ea392b45dc9ff9babc0850b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classstudent_ab98c4cb9d85152c3abd2b5d4255b8271}\label{classstudent_ab98c4cb9d85152c3abd2b5d4255b8271}} 
+\index{student@{student}!remove\+Borrowed\+Book@{remove\+Borrowed\+Book}}
+\index{remove\+Borrowed\+Book@{remove\+Borrowed\+Book}!student@{student}}
+\subsubsection{\texorpdfstring{remove\+Borrowed\+Book()}{removeBorrowedBook()}}
+{\footnotesize\ttfamily void student\+::remove\+Borrowed\+Book (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+function removes the first book of the borrowed queue 
+
+Definition at line 34 of file Student.\+cpp.
+
+
+\begin{DoxyCode}
+34                                  \{
+35     \hyperlink{classstudent_ab477f6c1525709586ea41364dc8c568b}{borrowedBooks}->\hyperlink{classqueue_l_l_a4204a9db973b69be5824ca2495130b40}{remove}();
+36 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classstudent_ab98c4cb9d85152c3abd2b5d4255b8271_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classstudent_a5387f0131233065383ca141ddec50de6}\label{classstudent_a5387f0131233065383ca141ddec50de6}} 
+\index{student@{student}!remove\+Borrowed\+Book\+Atindex@{remove\+Borrowed\+Book\+Atindex}}
+\index{remove\+Borrowed\+Book\+Atindex@{remove\+Borrowed\+Book\+Atindex}!student@{student}}
+\subsubsection{\texorpdfstring{remove\+Borrowed\+Book\+Atindex()}{removeBorrowedBookAtindex()}}
+{\footnotesize\ttfamily void student\+::remove\+Borrowed\+Book\+Atindex (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+function removes the book at location index of the borrowed queue 
+
+Definition at line 38 of file Student.\+cpp.
+
+
+\begin{DoxyCode}
+38                                                  \{
+39     \hyperlink{classstudent_ab477f6c1525709586ea41364dc8c568b}{borrowedBooks}->\hyperlink{classqueue_l_l_abe3f175ee8c25c55d18650c5b13297b1}{removeAtIndex}(index);
+40 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classstudent_a5387f0131233065383ca141ddec50de6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classstudent_a5387f0131233065383ca141ddec50de6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classstudent_abda32701d8741f07e9aa45d339a122ff}\label{classstudent_abda32701d8741f07e9aa45d339a122ff}} 
+\index{student@{student}!set\+Id@{set\+Id}}
+\index{set\+Id@{set\+Id}!student@{student}}
+\subsubsection{\texorpdfstring{set\+Id()}{setId()}}
+{\footnotesize\ttfamily void student\+::set\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+function sets student id 
+\begin{DoxyParams}{Parameters}
+{\em student} & id \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 51 of file Student.\+cpp.
+
+
+\begin{DoxyCode}
+51                           \{
+52     this->\textcolor{keywordtype}{id} = \hyperlink{classstudent_a8215d11b0d1adc77e0808a0ff4d0f6a2}{id};
+53 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classstudent_a9e5279d275d68557215edd499c15b0a2}\label{classstudent_a9e5279d275d68557215edd499c15b0a2}} 
+\index{student@{student}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!student@{student}}
+\subsubsection{\texorpdfstring{set\+Name()}{setName()}}
+{\footnotesize\ttfamily void student\+::set\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+function sets student name 
+\begin{DoxyParams}{Parameters}
+{\em student} & name \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 59 of file Student.\+cpp.
+
+
+\begin{DoxyCode}
+59                                            \{
+60     this->\hyperlink{classstudent_a8bba46a454eaecf8619a68c4c38c7b8d}{name} = \hyperlink{classstudent_a8bba46a454eaecf8619a68c4c38c7b8d}{name};
+61 \}
+\end{DoxyCode}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classstudent_aaaddafca542c39f7442b1807ba5600c3}\label{classstudent_aaaddafca542c39f7442b1807ba5600c3}} 
+\index{student@{student}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!student@{student}}
+\subsubsection{\texorpdfstring{operator"!=}{operator!=}}
+{\footnotesize\ttfamily bool operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{classstudent}{student} \&}]{s1,  }\item[{const \hyperlink{classstudent}{student} \&}]{s2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+function overloads operator != 
+\begin{DoxyParams}{Parameters}
+{\em out} & output stream \\
+\hline
+{\em st} & student object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstudent_a73f5ef786ecabf4118c6606f42829606}\label{classstudent_a73f5ef786ecabf4118c6606f42829606}} 
+\index{student@{student}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!student@{student}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \hyperlink{classstudent}{student} \&}]{st }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+function overloads operator $<$$<$ 
+\begin{DoxyParams}{Parameters}
+{\em out} & output stream \\
+\hline
+{\em st} & student object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 63 of file Student.\+cpp.
+
+
+\begin{DoxyCode}
+63                                                            \{
+64     \textcolor{keywordflow}{if}(st.\hyperlink{classstudent_ab477f6c1525709586ea41364dc8c568b}{borrowedBooks}->\hyperlink{classqueue_l_l_a8969feebcb563f0b489bc112422b9563}{getSize}()>0)\{
+65         \textcolor{keywordflow}{return} out <<\textcolor{stringliteral}{"STUDENT id="}<< st.\hyperlink{classstudent_a8215d11b0d1adc77e0808a0ff4d0f6a2}{id} << \textcolor{stringliteral}{" name="} <<st.\hyperlink{classstudent_a8bba46a454eaecf8619a68c4c38c7b8d}{name} <<
+66                 \textcolor{stringliteral}{" \{list of borrowed books:\(\backslash\)n"}<<*(st.\hyperlink{classstudent_ab477f6c1525709586ea41364dc8c568b}{borrowedBooks})<<\textcolor{stringliteral}{"\}\(\backslash\)n"};
+67     \}
+68     \textcolor{keywordflow}{else}\{
+69         \textcolor{keywordflow}{return} out <<\textcolor{stringliteral}{"STUDENT id="}<< st.\hyperlink{classstudent_a8215d11b0d1adc77e0808a0ff4d0f6a2}{id} << \textcolor{stringliteral}{" name="} <<st.\hyperlink{classstudent_a8bba46a454eaecf8619a68c4c38c7b8d}{name} << \textcolor{stringliteral}{" , student did not borrow a book
+      \(\backslash\)n "};
+70     \}
+71 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classstudent_ab477f6c1525709586ea41364dc8c568b}\label{classstudent_ab477f6c1525709586ea41364dc8c568b}} 
+\index{student@{student}!borrowed\+Books@{borrowed\+Books}}
+\index{borrowed\+Books@{borrowed\+Books}!student@{student}}
+\subsubsection{\texorpdfstring{borrowed\+Books}{borrowedBooks}}
+{\footnotesize\ttfamily \hyperlink{classqueue_l_l}{queue\+LL}$<$\hyperlink{classbook}{book}$>$$\ast$ student\+::borrowed\+Books\hspace{0.3cm}{\ttfamily [private]}}
+
+queue of borrowed books 
+
+Definition at line 111 of file Student.\+h.
+
+\mbox{\Hypertarget{classstudent_a8215d11b0d1adc77e0808a0ff4d0f6a2}\label{classstudent_a8215d11b0d1adc77e0808a0ff4d0f6a2}} 
+\index{student@{student}!id@{id}}
+\index{id@{id}!student@{student}}
+\subsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int student\+::id\hspace{0.3cm}{\ttfamily [private]}}
+
+student id 
+
+Definition at line 103 of file Student.\+h.
+
+\mbox{\Hypertarget{classstudent_a8bba46a454eaecf8619a68c4c38c7b8d}\label{classstudent_a8bba46a454eaecf8619a68c4c38c7b8d}} 
+\index{student@{student}!name@{name}}
+\index{name@{name}!student@{student}}
+\subsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string student\+::name\hspace{0.3cm}{\ttfamily [private]}}
+
+student name 
+
+Definition at line 107 of file Student.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_student_8h}{Student.\+h}\item 
+src/\hyperlink{_student_8cpp}{Student.\+cpp}\end{DoxyCompactItemize}

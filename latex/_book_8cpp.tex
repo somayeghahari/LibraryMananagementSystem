@@ -1,0 +1,137 @@
+\hypertarget{_book_8cpp}{}\section{src/\+Book.cpp File Reference}
+\label{_book_8cpp}\index{src/\+Book.\+cpp@{src/\+Book.\+cpp}}
+{\ttfamily \#include \char`\"{}Book.\+h\char`\"{}}\newline
+Include dependency graph for Book.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_book_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{_book_8cpp_a9bd0243ea50c5b8c37ed0d5527f24177}{operator$<$$<$} (std\+::ostream \&out, const \hyperlink{classbook}{book} \&b)
+\item 
+bool \hyperlink{_book_8cpp_af7856e28b06865a9691d5c7a330633a4}{operator!=} (const \hyperlink{classbook}{book} \&b1, const \hyperlink{classbook}{book} \&b2)
+\item 
+bool \hyperlink{_book_8cpp_a3d386e1f8255c6b62d9858fb8ff41c86}{operator$<$} (\hyperlink{classbook}{book} \&b1, \hyperlink{classbook}{book} \&b2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_book_8cpp_af7856e28b06865a9691d5c7a330633a4}\label{_book_8cpp_af7856e28b06865a9691d5c7a330633a4}} 
+\index{Book.\+cpp@{Book.\+cpp}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Book.\+cpp@{Book.\+cpp}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{classbook}{book} \&}]{b1,  }\item[{const \hyperlink{classbook}{book} \&}]{b2 }\end{DoxyParamCaption})}
+
+function overloads operator != (not equal) 
+\begin{DoxyParams}{Parameters}
+{\em b1} & first book object \\
+\hline
+{\em b2} & second book object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 156 of file Book.\+cpp.
+
+
+\begin{DoxyCode}
+156                                                  \{
+157     \textcolor{keywordflow}{if}(b1.\hyperlink{classbook_ad8bf54b50c72af3827823c04d724d824}{id}!=b2.\hyperlink{classbook_ad8bf54b50c72af3827823c04d724d824}{id} || b1.\hyperlink{classbook_a5eabc1c1c5abff26997bec3d41f90d9e}{name}!=b2.\hyperlink{classbook_a5eabc1c1c5abff26997bec3d41f90d9e}{name} || b1.\hyperlink{classbook_a21b2962c6227818732db27f12121b732}{authorName}!=b2.
+      \hyperlink{classbook_a21b2962c6227818732db27f12121b732}{authorName})
+158         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+159     \textcolor{keywordflow}{else}
+160         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+161 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{_book_8cpp_a3d386e1f8255c6b62d9858fb8ff41c86}\label{_book_8cpp_a3d386e1f8255c6b62d9858fb8ff41c86}} 
+\index{Book.\+cpp@{Book.\+cpp}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Book.\+cpp@{Book.\+cpp}}
+\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool operator$<$ (\begin{DoxyParamCaption}\item[{\hyperlink{classbook}{book} \&}]{b1,  }\item[{\hyperlink{classbook}{book} \&}]{b2 }\end{DoxyParamCaption})}
+
+overload operator $<$ 
+\begin{DoxyParams}{Parameters}
+{\em b1} & first book object \\
+\hline
+{\em b2} & first book object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, if due time b1 is smaller than due time b2 
+\end{DoxyReturn}
+
+
+Definition at line 163 of file Book.\+cpp.
+
+
+\begin{DoxyCode}
+163                                       \{
+164     time\_t t1 = mktime(&(b1.\hyperlink{classbook_abf72d9a32cdadee632df5a626dbe33b8}{due\_time}));
+165     time\_t t2 = mktime(&(b2.\hyperlink{classbook_abf72d9a32cdadee632df5a626dbe33b8}{due\_time}));
+166     \textcolor{keywordtype}{double} diffSecs = difftime(t1, t2);
+167     \textcolor{keywordflow}{if}(diffSecs<0 )
+168         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+169     \textcolor{keywordflow}{else}
+170         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+171 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{_book_8cpp_a9bd0243ea50c5b8c37ed0d5527f24177}\label{_book_8cpp_a9bd0243ea50c5b8c37ed0d5527f24177}} 
+\index{Book.\+cpp@{Book.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Book.\+cpp@{Book.\+cpp}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \hyperlink{classbook}{book} \&}]{b }\end{DoxyParamCaption})}
+
+function overloads operator $<$$<$ 
+\begin{DoxyParams}{Parameters}
+{\em out} & output stream \\
+\hline
+{\em b} & book object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 133 of file Book.\+cpp.
+
+
+\begin{DoxyCode}
+133                                                         \{
+134      std::string tmp= b.\hyperlink{classbook_ab745520ed537e69bde6f2e3d7a103276}{borrowed}?\textcolor{stringliteral}{"borrowed "}:\textcolor{stringliteral}{"not borrowed "};
+135      \textcolor{keywordflow}{if}(b.\hyperlink{classbook_a40ce04fcfbf99ffdbe7a4e1463588ee5}{waitingStudentId}->\hyperlink{classqueue_l_l_a8969feebcb563f0b489bc112422b9563}{getSize}()>0)
+136          \textcolor{keywordflow}{return} out <<\textcolor{stringliteral}{"BOOK id="}<< b.\hyperlink{classbook_ad8bf54b50c72af3827823c04d724d824}{id} << \textcolor{stringliteral}{" name="} << b.\hyperlink{classbook_a5eabc1c1c5abff26997bec3d41f90d9e}{name} << \textcolor{stringliteral}{" author="}
+137                  << b.\hyperlink{classbook_a21b2962c6227818732db27f12121b732}{authorName} << \textcolor{stringliteral}{" "}<<tmp << \textcolor{stringliteral}{" due date="}
+138                  << b.\hyperlink{classbook_abf72d9a32cdadee632df5a626dbe33b8}{due\_time}.tm\_year<<\textcolor{stringliteral}{"-"}<< b.\hyperlink{classbook_abf72d9a32cdadee632df5a626dbe33b8}{due\_time}.tm\_mon<<\textcolor{stringliteral}{"-"}
+139                  << b.\hyperlink{classbook_abf72d9a32cdadee632df5a626dbe33b8}{due\_time}.tm\_mday<<\textcolor{stringliteral}{" "}<< b.\hyperlink{classbook_abf72d9a32cdadee632df5a626dbe33b8}{due\_time}.tm\_hour<<\textcolor{stringliteral}{":"}
+140                  << b.\hyperlink{classbook_abf72d9a32cdadee632df5a626dbe33b8}{due\_time}.tm\_min<< \textcolor{stringliteral}{":"}<< b.\hyperlink{classbook_abf72d9a32cdadee632df5a626dbe33b8}{due\_time}.tm\_sec
+141                  <<\textcolor{stringliteral}{" waiting students' id="}<< *(b.\hyperlink{classbook_a40ce04fcfbf99ffdbe7a4e1463588ee5}{waitingStudentId})<<\textcolor{stringliteral}{"\(\backslash\)n"};
+142      \textcolor{keywordflow}{else}\{
+143          \textcolor{keywordflow}{if}( b.\hyperlink{classbook_ab745520ed537e69bde6f2e3d7a103276}{borrowed})
+144              \textcolor{keywordflow}{return} out <<\textcolor{stringliteral}{"BOOK id="}<< b.\hyperlink{classbook_ad8bf54b50c72af3827823c04d724d824}{id} << \textcolor{stringliteral}{" name="} << b.\hyperlink{classbook_a5eabc1c1c5abff26997bec3d41f90d9e}{name} << \textcolor{stringliteral}{" author="}
+145                      << b.\hyperlink{classbook_a21b2962c6227818732db27f12121b732}{authorName} << \textcolor{stringliteral}{" "}<< tmp << \textcolor{stringliteral}{" due date="}
+146                      << b.\hyperlink{classbook_abf72d9a32cdadee632df5a626dbe33b8}{due\_time}.tm\_year<<\textcolor{stringliteral}{"-"}<< b.\hyperlink{classbook_abf72d9a32cdadee632df5a626dbe33b8}{due\_time}.tm\_mon<<\textcolor{stringliteral}{"-"}
+147                      << b.\hyperlink{classbook_abf72d9a32cdadee632df5a626dbe33b8}{due\_time}.tm\_mday<<\textcolor{stringliteral}{" "}<< b.\hyperlink{classbook_abf72d9a32cdadee632df5a626dbe33b8}{due\_time}.tm\_hour<<\textcolor{stringliteral}{":"}
+148                      << b.\hyperlink{classbook_abf72d9a32cdadee632df5a626dbe33b8}{due\_time}.tm\_min<< \textcolor{stringliteral}{":"}<< b.\hyperlink{classbook_abf72d9a32cdadee632df5a626dbe33b8}{due\_time}.tm\_sec <<\textcolor{stringliteral}{"\(\backslash\)n"};
+149          \textcolor{keywordflow}{else}
+150              \textcolor{keywordflow}{return} out <<\textcolor{stringliteral}{"BOOK id="}<< b.\hyperlink{classbook_ad8bf54b50c72af3827823c04d724d824}{id} << \textcolor{stringliteral}{" name="} << b.\hyperlink{classbook_a5eabc1c1c5abff26997bec3d41f90d9e}{name} << \textcolor{stringliteral}{" author="}
+151                                  << b.\hyperlink{classbook_a21b2962c6227818732db27f12121b732}{authorName} << \textcolor{stringliteral}{" "}<< tmp<<\textcolor{stringliteral}{"\(\backslash\)n"};
+152      \}
+153 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{_book_8cpp_a9bd0243ea50c5b8c37ed0d5527f24177_cgraph}
+\end{center}
+\end{figure}

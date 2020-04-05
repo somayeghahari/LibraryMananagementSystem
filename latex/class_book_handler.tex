@@ -1,0 +1,426 @@
+\hypertarget{class_book_handler}{}\section{Book\+Handler Class Reference}
+\label{class_book_handler}\index{Book\+Handler@{Book\+Handler}}
+
+
+{\ttfamily \#include $<$Book\+Handler.\+h$>$}
+
+
+
+Collaboration diagram for Book\+Handler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_book_handler__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_book_handler_a73362998148ff419f5dccd629f858832}{Book\+Handler} ()
+\item 
+virtual \hyperlink{class_book_handler_afd60e561a18f17d087da3c8b04d0c842}{$\sim$\+Book\+Handler} ()
+\item 
+void \hyperlink{class_book_handler_a29517e8c55796a94f29c48d6971e9f1d}{add\+Book} (std\+::string name, std\+::string auth\+Name)
+\item 
+void \hyperlink{class_book_handler_aac102920daa87a20f3e169f9c3cbc33b}{add\+Book} (\hyperlink{classbook}{book} $\ast$temp)
+\item 
+void \hyperlink{class_book_handler_ac6e2d4211b55e636348daaa9253a2d12}{print} ()
+\item 
+\hyperlink{classbook}{book} $\ast$ \hyperlink{class_book_handler_ae82abc7349e19e59cd6f3cb23c7928fa}{find\+Book\+Id} (int index)
+\item 
+\hyperlink{classbook}{book} $\ast$ \hyperlink{class_book_handler_aab461b060b38d51586ed043143b4bc68}{find\+Book} (\hyperlink{classbook}{book} \&temp)
+\item 
+void \hyperlink{class_book_handler_ac0274027fa9375870ffb08fbb6377a7d}{borrowed\+Books\+Str\+List} (std\+::string $\ast$result, int \&borrowed\+Books\+Size)
+\item 
+int \hyperlink{class_book_handler_a2939194b5d19618d5a69743b4c0dc240}{get\+Size} ()
+\item 
+void \hyperlink{class_book_handler_a6794f0f693ff3048df64a5b254c183af}{print\+File} (std\+::ofstream \&ou\+File)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classqueue_l_l}{queue\+LL}$<$ \hyperlink{classbook}{book} $>$ $\ast$ \hyperlink{class_book_handler_a13a6c78422b3ad7acd5ebdb9555a0286}{books\+List}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class handles the list of the books 
+
+Definition at line 18 of file Book\+Handler.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_book_handler_a73362998148ff419f5dccd629f858832}\label{class_book_handler_a73362998148ff419f5dccd629f858832}} 
+\index{Book\+Handler@{Book\+Handler}!Book\+Handler@{Book\+Handler}}
+\index{Book\+Handler@{Book\+Handler}!Book\+Handler@{Book\+Handler}}
+\subsubsection{\texorpdfstring{Book\+Handler()}{BookHandler()}}
+{\footnotesize\ttfamily Book\+Handler\+::\+Book\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+constructor function 
+
+Definition at line 10 of file Book\+Handler.\+cpp.
+
+
+\begin{DoxyCode}
+10                          \{
+11     \hyperlink{class_book_handler_a13a6c78422b3ad7acd5ebdb9555a0286}{booksList} = \textcolor{keyword}{new} \hyperlink{classqueue_l_l}{queueLL<book>}();
+12 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_book_handler_afd60e561a18f17d087da3c8b04d0c842}\label{class_book_handler_afd60e561a18f17d087da3c8b04d0c842}} 
+\index{Book\+Handler@{Book\+Handler}!````~Book\+Handler@{$\sim$\+Book\+Handler}}
+\index{````~Book\+Handler@{$\sim$\+Book\+Handler}!Book\+Handler@{Book\+Handler}}
+\subsubsection{\texorpdfstring{$\sim$\+Book\+Handler()}{~BookHandler()}}
+{\footnotesize\ttfamily Book\+Handler\+::$\sim$\+Book\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+destructor function 
+
+Definition at line 14 of file Book\+Handler.\+cpp.
+
+
+\begin{DoxyCode}
+14                           \{
+15     \textcolor{keyword}{delete}(\hyperlink{class_book_handler_a13a6c78422b3ad7acd5ebdb9555a0286}{booksList});
+16 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_book_handler_a29517e8c55796a94f29c48d6971e9f1d}\label{class_book_handler_a29517e8c55796a94f29c48d6971e9f1d}} 
+\index{Book\+Handler@{Book\+Handler}!add\+Book@{add\+Book}}
+\index{add\+Book@{add\+Book}!Book\+Handler@{Book\+Handler}}
+\subsubsection{\texorpdfstring{add\+Book()}{addBook()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Book\+Handler\+::add\+Book (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::string}]{auth\+Name }\end{DoxyParamCaption})}
+
+function to add a book to the list of the books 
+\begin{DoxyParams}{Parameters}
+{\em name} & book name \\
+\hline
+{\em auth\+Name} & author name of the book \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 18 of file Book\+Handler.\+cpp.
+
+
+\begin{DoxyCode}
+18                                                             \{
+19     \hyperlink{classbook}{book} * temp = \textcolor{keyword}{new} \hyperlink{classbook}{book}(name, authName);
+20     \hyperlink{class_book_handler_a13a6c78422b3ad7acd5ebdb9555a0286}{booksList}->\hyperlink{classqueue_l_l_adcbcc26433da2c9d17b6cf0802d1d7d2}{add}(temp);
+21 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{class_book_handler_a29517e8c55796a94f29c48d6971e9f1d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_book_handler_a29517e8c55796a94f29c48d6971e9f1d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_book_handler_aac102920daa87a20f3e169f9c3cbc33b}\label{class_book_handler_aac102920daa87a20f3e169f9c3cbc33b}} 
+\index{Book\+Handler@{Book\+Handler}!add\+Book@{add\+Book}}
+\index{add\+Book@{add\+Book}!Book\+Handler@{Book\+Handler}}
+\subsubsection{\texorpdfstring{add\+Book()}{addBook()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Book\+Handler\+::add\+Book (\begin{DoxyParamCaption}\item[{\hyperlink{classbook}{book} $\ast$}]{temp }\end{DoxyParamCaption})}
+
+function to add a book to the list of the books 
+\begin{DoxyParams}{Parameters}
+{\em temp} & book object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 22 of file Book\+Handler.\+cpp.
+
+
+\begin{DoxyCode}
+22                                      \{
+23     \hyperlink{class_book_handler_a13a6c78422b3ad7acd5ebdb9555a0286}{booksList}->\hyperlink{classqueue_l_l_adcbcc26433da2c9d17b6cf0802d1d7d2}{add}(temp);
+24 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{class_book_handler_aac102920daa87a20f3e169f9c3cbc33b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_book_handler_ac0274027fa9375870ffb08fbb6377a7d}\label{class_book_handler_ac0274027fa9375870ffb08fbb6377a7d}} 
+\index{Book\+Handler@{Book\+Handler}!borrowed\+Books\+Str\+List@{borrowed\+Books\+Str\+List}}
+\index{borrowed\+Books\+Str\+List@{borrowed\+Books\+Str\+List}!Book\+Handler@{Book\+Handler}}
+\subsubsection{\texorpdfstring{borrowed\+Books\+Str\+List()}{borrowedBooksStrList()}}
+{\footnotesize\ttfamily void Book\+Handler\+::borrowed\+Books\+Str\+List (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{result,  }\item[{int \&}]{borrowed\+Books\+Size }\end{DoxyParamCaption})}
+
+function to make a list of the borrowed books between all the books in the list 
+\begin{DoxyParams}{Parameters}
+{\em result} & string list of the borrowed books \\
+\hline
+{\em borrowed\+Books\+Size} & size of the string list of the borrowed books \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 70 of file Book\+Handler.\+cpp.
+
+
+\begin{DoxyCode}
+70                                                                                   \{
+71     \hyperlink{classbook}{book} ** list = \hyperlink{class_book_handler_a13a6c78422b3ad7acd5ebdb9555a0286}{booksList}->\hyperlink{classqueue_l_l_ae9a479b9463f51c5148dd80b68335d32}{nodeList}();
+72     \textcolor{keywordtype}{int} c=0;
+73     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<\hyperlink{class_book_handler_a13a6c78422b3ad7acd5ebdb9555a0286}{booksList}->\hyperlink{classqueue_l_l_a8969feebcb563f0b489bc112422b9563}{getSize}(); i++)\{
+74         \textcolor{keywordflow}{if}(list[i]->isBorrowed())\{
+75             std::string temp ;
+76             list[i]->\hyperlink{classbook_a458d26a8ddd01f69083a68eb68bf2181}{toString}(temp);
+77             result[c++]=temp;
+78         \}
+79     \}
+80     borrowedBooksSize = c;
+81 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_book_handler_ac0274027fa9375870ffb08fbb6377a7d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_book_handler_ac0274027fa9375870ffb08fbb6377a7d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_book_handler_aab461b060b38d51586ed043143b4bc68}\label{class_book_handler_aab461b060b38d51586ed043143b4bc68}} 
+\index{Book\+Handler@{Book\+Handler}!find\+Book@{find\+Book}}
+\index{find\+Book@{find\+Book}!Book\+Handler@{Book\+Handler}}
+\subsubsection{\texorpdfstring{find\+Book()}{findBook()}}
+{\footnotesize\ttfamily \hyperlink{classbook}{book} $\ast$ Book\+Handler\+::find\+Book (\begin{DoxyParamCaption}\item[{\hyperlink{classbook}{book} \&}]{temp }\end{DoxyParamCaption})}
+
+function to find book object among the books list 
+\begin{DoxyParams}{Parameters}
+{\em temp} & book object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: pointer to the found book 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file Book\+Handler.\+cpp.
+
+
+\begin{DoxyCode}
+51                                         \{
+52     \hyperlink{classbook}{book} ** list = \hyperlink{class_book_handler_a13a6c78422b3ad7acd5ebdb9555a0286}{booksList}->\hyperlink{classqueue_l_l_ae9a479b9463f51c5148dd80b68335d32}{nodeList}();
+53     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<\hyperlink{class_book_handler_a13a6c78422b3ad7acd5ebdb9555a0286}{booksList}->\hyperlink{classqueue_l_l_a8969feebcb563f0b489bc112422b9563}{getSize}(); i++)\{
+54         \textcolor{keywordflow}{if}(!(*list[i]!=temp))\{
+55             \textcolor{keywordflow}{return} list[i];
+56         \}
+57     \}
+58     \textcolor{keywordflow}{return} NULL;
+59 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{class_book_handler_aab461b060b38d51586ed043143b4bc68_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_book_handler_aab461b060b38d51586ed043143b4bc68_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_book_handler_ae82abc7349e19e59cd6f3cb23c7928fa}\label{class_book_handler_ae82abc7349e19e59cd6f3cb23c7928fa}} 
+\index{Book\+Handler@{Book\+Handler}!find\+Book\+Id@{find\+Book\+Id}}
+\index{find\+Book\+Id@{find\+Book\+Id}!Book\+Handler@{Book\+Handler}}
+\subsubsection{\texorpdfstring{find\+Book\+Id()}{findBookId()}}
+{\footnotesize\ttfamily \hyperlink{classbook}{book} $\ast$ Book\+Handler\+::find\+Book\+Id (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+function to find id of the book at location index of the books list 
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: pointer to the found book 
+\end{DoxyReturn}
+
+
+Definition at line 42 of file Book\+Handler.\+cpp.
+
+
+\begin{DoxyCode}
+42                                         \{
+43     \hyperlink{classbook}{book} ** list = \hyperlink{class_book_handler_a13a6c78422b3ad7acd5ebdb9555a0286}{booksList}->\hyperlink{classqueue_l_l_ae9a479b9463f51c5148dd80b68335d32}{nodeList}();
+44     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<\hyperlink{class_book_handler_a13a6c78422b3ad7acd5ebdb9555a0286}{booksList}->\hyperlink{classqueue_l_l_a8969feebcb563f0b489bc112422b9563}{getSize}(); i++)\{
+45         \textcolor{keywordflow}{if}(list[i]->getId()==index)\{
+46             \textcolor{keywordflow}{return} list[i];
+47         \}
+48     \}
+49     \textcolor{keywordflow}{return} NULL;
+50 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{class_book_handler_ae82abc7349e19e59cd6f3cb23c7928fa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_book_handler_ae82abc7349e19e59cd6f3cb23c7928fa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_book_handler_a2939194b5d19618d5a69743b4c0dc240}\label{class_book_handler_a2939194b5d19618d5a69743b4c0dc240}} 
+\index{Book\+Handler@{Book\+Handler}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!Book\+Handler@{Book\+Handler}}
+\subsubsection{\texorpdfstring{get\+Size()}{getSize()}}
+{\footnotesize\ttfamily int Book\+Handler\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+function to return size of the books list \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 83 of file Book\+Handler.\+cpp.
+
+
+\begin{DoxyCode}
+83                          \{
+84     \textcolor{keywordflow}{return} \hyperlink{class_book_handler_a13a6c78422b3ad7acd5ebdb9555a0286}{booksList}->\hyperlink{classqueue_l_l_a8969feebcb563f0b489bc112422b9563}{getSize}();
+85 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{class_book_handler_a2939194b5d19618d5a69743b4c0dc240_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_book_handler_a2939194b5d19618d5a69743b4c0dc240_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_book_handler_ac6e2d4211b55e636348daaa9253a2d12}\label{class_book_handler_ac6e2d4211b55e636348daaa9253a2d12}} 
+\index{Book\+Handler@{Book\+Handler}!print@{print}}
+\index{print@{print}!Book\+Handler@{Book\+Handler}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Book\+Handler\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+function to print the list of the books 
+
+Definition at line 26 of file Book\+Handler.\+cpp.
+
+
+\begin{DoxyCode}
+26                         \{
+27     \textcolor{keywordflow}{if}(\hyperlink{class_book_handler_a13a6c78422b3ad7acd5ebdb9555a0286}{booksList}->\hyperlink{classqueue_l_l_a8969feebcb563f0b489bc112422b9563}{getSize}() == 0)\{
+28         std::cout<<\textcolor{stringliteral}{"No student is added to the tree"};
+29     \}
+30     \textcolor{keywordflow}{else} \{
+31         std::cout<<*\hyperlink{class_book_handler_a13a6c78422b3ad7acd5ebdb9555a0286}{booksList};
+32     \}
+33 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{class_book_handler_ac6e2d4211b55e636348daaa9253a2d12_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_book_handler_ac6e2d4211b55e636348daaa9253a2d12_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_book_handler_a6794f0f693ff3048df64a5b254c183af}\label{class_book_handler_a6794f0f693ff3048df64a5b254c183af}} 
+\index{Book\+Handler@{Book\+Handler}!print\+File@{print\+File}}
+\index{print\+File@{print\+File}!Book\+Handler@{Book\+Handler}}
+\subsubsection{\texorpdfstring{print\+File()}{printFile()}}
+{\footnotesize\ttfamily void Book\+Handler\+::print\+File (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{ou\+File }\end{DoxyParamCaption})}
+
+function to print the list of the books to the file 
+
+Definition at line 34 of file Book\+Handler.\+cpp.
+
+
+\begin{DoxyCode}
+34                                                \{
+35     \hyperlink{classbook}{book} ** list = \hyperlink{class_book_handler_a13a6c78422b3ad7acd5ebdb9555a0286}{booksList}->\hyperlink{classqueue_l_l_ae9a479b9463f51c5148dd80b68335d32}{nodeList}();
+36     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<\hyperlink{class_book_handler_a13a6c78422b3ad7acd5ebdb9555a0286}{booksList}->\hyperlink{classqueue_l_l_a8969feebcb563f0b489bc112422b9563}{getSize}(); i++)\{
+37         std::string str;
+38         list[i]->\hyperlink{classbook_aea835c54459ec0a4d29d42f2f6f7858d}{createLine}(str);
+39         ouFile<<str<<\textcolor{stringliteral}{"\(\backslash\)n"};
+40     \}
+41 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_book_handler_a6794f0f693ff3048df64a5b254c183af_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_book_handler_a6794f0f693ff3048df64a5b254c183af_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_book_handler_a13a6c78422b3ad7acd5ebdb9555a0286}\label{class_book_handler_a13a6c78422b3ad7acd5ebdb9555a0286}} 
+\index{Book\+Handler@{Book\+Handler}!books\+List@{books\+List}}
+\index{books\+List@{books\+List}!Book\+Handler@{Book\+Handler}}
+\subsubsection{\texorpdfstring{books\+List}{booksList}}
+{\footnotesize\ttfamily \hyperlink{classqueue_l_l}{queue\+LL}$<$\hyperlink{classbook}{book}$>$$\ast$ Book\+Handler\+::books\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+list of the books is kept in a queue 
+
+Definition at line 76 of file Book\+Handler.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_book_handler_8h}{Book\+Handler.\+h}\item 
+src/\hyperlink{_book_handler_8cpp}{Book\+Handler.\+cpp}\end{DoxyCompactItemize}

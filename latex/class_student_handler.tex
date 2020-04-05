@@ -1,0 +1,429 @@
+\hypertarget{class_student_handler}{}\section{Student\+Handler Class Reference}
+\label{class_student_handler}\index{Student\+Handler@{Student\+Handler}}
+
+
+{\ttfamily \#include $<$Student\+Handler.\+h$>$}
+
+
+
+Collaboration diagram for Student\+Handler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_student_handler__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_student_handler_a789f9be791a4ada717975e9361f5c967}{Student\+Handler} ()
+\item 
+virtual \hyperlink{class_student_handler_a1ad6892062e41ea9d5ac1ddf5cdf64c2}{$\sim$\+Student\+Handler} ()
+\item 
+void \hyperlink{class_student_handler_ae7219f3612d49a8bda1cb14c48557b37}{add\+Student} (int id, std\+::string name)
+\item 
+void \hyperlink{class_student_handler_a1d0e1f3e8383c38d5c9c5781fb8ce82d}{add\+Student} (\hyperlink{classstudent}{student} $\ast$temp)
+\item 
+\hyperlink{classstudent}{student} $\ast$ \hyperlink{class_student_handler_ad54072af22b0b84e677af69426ed0bff}{find\+Student\+Id} (int index)
+\item 
+void \hyperlink{class_student_handler_a08899a7b8ca38541605c564c572d72ef}{print} ()
+\item 
+void \hyperlink{class_student_handler_a8049bb821d2a0a951600ab79c6ee4e27}{print\+File} (std\+::ofstream \&\hyperlink{_library_mananagement_system_8cpp_a2e073350989a922d101f00447e52dfc6}{ou\+File\+Student})
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classstudent}{student} $\ast$ \hyperlink{class_student_handler_a366b1628971d8b8ae437a87978e26e8a}{find} (const \hyperlink{class_node}{Node}$<$ \hyperlink{classstudent}{student} $>$ $\ast$node, int id)
+\item 
+void \hyperlink{class_student_handler_a9caee269c1ef9b34af2eeb0452a0cabb}{inorder} (const \hyperlink{class_node}{Node}$<$ \hyperlink{classstudent}{student} $>$ $\ast$tmp)
+\item 
+void \hyperlink{class_student_handler_a61f541e2aa02759a3213a9bceecf125c}{inorder\+File} (const \hyperlink{class_node}{Node}$<$ \hyperlink{classstudent}{student} $>$ $\ast$tmp, std\+::ofstream \&\hyperlink{_library_mananagement_system_8cpp_a2e073350989a922d101f00447e52dfc6}{ou\+File\+Student})
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_binary_tree}{Binary\+Tree}$<$ \hyperlink{classstudent}{student} $>$ $\ast$ \hyperlink{class_student_handler_a7141eccd57a30aa140e5b4e92b0939ea}{student\+Tree}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class handles the list of the students 
+
+Definition at line 18 of file Student\+Handler.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_student_handler_a789f9be791a4ada717975e9361f5c967}\label{class_student_handler_a789f9be791a4ada717975e9361f5c967}} 
+\index{Student\+Handler@{Student\+Handler}!Student\+Handler@{Student\+Handler}}
+\index{Student\+Handler@{Student\+Handler}!Student\+Handler@{Student\+Handler}}
+\subsubsection{\texorpdfstring{Student\+Handler()}{StudentHandler()}}
+{\footnotesize\ttfamily Student\+Handler\+::\+Student\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+constructor function 
+
+Definition at line 10 of file Student\+Handler.\+cpp.
+
+
+\begin{DoxyCode}
+10                                \{
+11     \hyperlink{class_student_handler_a7141eccd57a30aa140e5b4e92b0939ea}{studentTree} = \textcolor{keyword}{new} \hyperlink{class_binary_tree}{BinaryTree<student>}();
+12 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_student_handler_a1ad6892062e41ea9d5ac1ddf5cdf64c2}\label{class_student_handler_a1ad6892062e41ea9d5ac1ddf5cdf64c2}} 
+\index{Student\+Handler@{Student\+Handler}!````~Student\+Handler@{$\sim$\+Student\+Handler}}
+\index{````~Student\+Handler@{$\sim$\+Student\+Handler}!Student\+Handler@{Student\+Handler}}
+\subsubsection{\texorpdfstring{$\sim$\+Student\+Handler()}{~StudentHandler()}}
+{\footnotesize\ttfamily Student\+Handler\+::$\sim$\+Student\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+destructor function 
+
+Definition at line 14 of file Student\+Handler.\+cpp.
+
+
+\begin{DoxyCode}
+14                                 \{
+15     \textcolor{keyword}{delete}(\hyperlink{class_student_handler_a7141eccd57a30aa140e5b4e92b0939ea}{studentTree});
+16 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_student_handler_ae7219f3612d49a8bda1cb14c48557b37}\label{class_student_handler_ae7219f3612d49a8bda1cb14c48557b37}} 
+\index{Student\+Handler@{Student\+Handler}!add\+Student@{add\+Student}}
+\index{add\+Student@{add\+Student}!Student\+Handler@{Student\+Handler}}
+\subsubsection{\texorpdfstring{add\+Student()}{addStudent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Student\+Handler\+::add\+Student (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+function to add a student to the list of the students 
+\begin{DoxyParams}{Parameters}
+{\em id} & student id \\
+\hline
+{\em name} & student name \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 18 of file Student\+Handler.\+cpp.
+
+
+\begin{DoxyCode}
+18                                                       \{
+19     \hyperlink{classstudent}{student} * temp = \textcolor{keyword}{new} \hyperlink{classstudent}{student}(\textcolor{keywordtype}{id}, name);
+20     \hyperlink{class_student_handler_a7141eccd57a30aa140e5b4e92b0939ea}{studentTree}->\hyperlink{class_binary_tree_a69ae782d438253d40cbd194737feca17}{insertNode}(temp);
+21 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_student_handler_ae7219f3612d49a8bda1cb14c48557b37_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_student_handler_ae7219f3612d49a8bda1cb14c48557b37_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_student_handler_a1d0e1f3e8383c38d5c9c5781fb8ce82d}\label{class_student_handler_a1d0e1f3e8383c38d5c9c5781fb8ce82d}} 
+\index{Student\+Handler@{Student\+Handler}!add\+Student@{add\+Student}}
+\index{add\+Student@{add\+Student}!Student\+Handler@{Student\+Handler}}
+\subsubsection{\texorpdfstring{add\+Student()}{addStudent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Student\+Handler\+::add\+Student (\begin{DoxyParamCaption}\item[{\hyperlink{classstudent}{student} $\ast$}]{temp }\end{DoxyParamCaption})}
+
+function to add a student to the list of the students 
+\begin{DoxyParams}{Parameters}
+{\em temp} & student object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 23 of file Student\+Handler.\+cpp.
+
+
+\begin{DoxyCode}
+23                                               \{
+24     \hyperlink{class_student_handler_a7141eccd57a30aa140e5b4e92b0939ea}{studentTree}->\hyperlink{class_binary_tree_a69ae782d438253d40cbd194737feca17}{insertNode}(temp);
+25 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_student_handler_a1d0e1f3e8383c38d5c9c5781fb8ce82d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_student_handler_a366b1628971d8b8ae437a87978e26e8a}\label{class_student_handler_a366b1628971d8b8ae437a87978e26e8a}} 
+\index{Student\+Handler@{Student\+Handler}!find@{find}}
+\index{find@{find}!Student\+Handler@{Student\+Handler}}
+\subsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily \hyperlink{classstudent}{student} $\ast$ Student\+Handler\+::find (\begin{DoxyParamCaption}\item[{const \hyperlink{class_node}{Node}$<$ \hyperlink{classstudent}{student} $>$ $\ast$}]{node,  }\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+function to find node 
+\begin{DoxyParams}{Parameters}
+{\em node} & \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 27 of file Student\+Handler.\+cpp.
+
+
+\begin{DoxyCode}
+27                                                               \{
+28     \textcolor{keywordflow}{if} (node == NULL)
+29         \textcolor{keywordflow}{return} NULL;
+30 
+31     \textcolor{keywordflow}{if} (node->\hyperlink{class_node_a8b322cc3cc17b752eb77533493713ddd}{data}->\hyperlink{classstudent_a718b1fdd02dd1ed06110f9e0e7ec7720}{getId}() == id)
+32         \textcolor{keywordflow}{return} node->\hyperlink{class_node_a8b322cc3cc17b752eb77533493713ddd}{data};
+33 
+34     \hyperlink{classstudent}{student} * resultL = \hyperlink{class_student_handler_a366b1628971d8b8ae437a87978e26e8a}{find}(node->\hyperlink{class_node_abb08a8b3137dd8fc8874348a439e01b4}{left}, \textcolor{keywordtype}{id});
+35     \textcolor{keywordflow}{if}(resultL != NULL) \textcolor{keywordflow}{return} resultL;
+36 
+37     \textcolor{keywordflow}{return} \hyperlink{class_student_handler_a366b1628971d8b8ae437a87978e26e8a}{find}(node->\hyperlink{class_node_a34452c0684d3cb1590406ad201b43e65}{right}, \textcolor{keywordtype}{id});
+38 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{class_student_handler_a366b1628971d8b8ae437a87978e26e8a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_student_handler_a366b1628971d8b8ae437a87978e26e8a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_student_handler_ad54072af22b0b84e677af69426ed0bff}\label{class_student_handler_ad54072af22b0b84e677af69426ed0bff}} 
+\index{Student\+Handler@{Student\+Handler}!find\+Student\+Id@{find\+Student\+Id}}
+\index{find\+Student\+Id@{find\+Student\+Id}!Student\+Handler@{Student\+Handler}}
+\subsubsection{\texorpdfstring{find\+Student\+Id()}{findStudentId()}}
+{\footnotesize\ttfamily \hyperlink{classstudent}{student} $\ast$ Student\+Handler\+::find\+Student\+Id (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+function to find id of the student at location index of the books list 
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: pointer to the found student 
+\end{DoxyReturn}
+
+
+Definition at line 40 of file Student\+Handler.\+cpp.
+
+
+\begin{DoxyCode}
+40                                              \{
+41 
+42     \textcolor{keywordflow}{if}(\hyperlink{class_student_handler_a7141eccd57a30aa140e5b4e92b0939ea}{studentTree}->\hyperlink{class_binary_tree_a9ee0cf09781cf2ecc471aacc61848dde}{getRoot}() == 0)\{
+43 \textcolor{comment}{//      std::cout<<"No student is added to the tree";}
+44         \textcolor{keywordflow}{return} NULL;
+45     \}
+46     \textcolor{keywordflow}{else} \{
+47         \textcolor{keywordflow}{return} \hyperlink{class_student_handler_a366b1628971d8b8ae437a87978e26e8a}{find}(\hyperlink{class_student_handler_a7141eccd57a30aa140e5b4e92b0939ea}{studentTree}->\hyperlink{class_binary_tree_a9ee0cf09781cf2ecc471aacc61848dde}{getRoot}(), id);
+48     \}
+49 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_student_handler_ad54072af22b0b84e677af69426ed0bff_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_student_handler_ad54072af22b0b84e677af69426ed0bff_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_student_handler_a9caee269c1ef9b34af2eeb0452a0cabb}\label{class_student_handler_a9caee269c1ef9b34af2eeb0452a0cabb}} 
+\index{Student\+Handler@{Student\+Handler}!inorder@{inorder}}
+\index{inorder@{inorder}!Student\+Handler@{Student\+Handler}}
+\subsubsection{\texorpdfstring{inorder()}{inorder()}}
+{\footnotesize\ttfamily void Student\+Handler\+::inorder (\begin{DoxyParamCaption}\item[{const \hyperlink{class_node}{Node}$<$ \hyperlink{classstudent}{student} $>$ $\ast$}]{tmp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+function to traverse binary tree of the list of the students inorder 
+\begin{DoxyParams}{Parameters}
+{\em tmp} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 51 of file Student\+Handler.\+cpp.
+
+
+\begin{DoxyCode}
+51                                                      \{
+52         \textcolor{keywordflow}{if}(tmp->\hyperlink{class_node_abb08a8b3137dd8fc8874348a439e01b4}{left}!= 0)
+53             \hyperlink{class_student_handler_a9caee269c1ef9b34af2eeb0452a0cabb}{inorder}(tmp->\hyperlink{class_node_abb08a8b3137dd8fc8874348a439e01b4}{left});
+54         std::cout<<*(tmp->\hyperlink{class_node_a8b322cc3cc17b752eb77533493713ddd}{data}) << \textcolor{stringliteral}{"\(\backslash\)n"};
+55         \textcolor{keywordflow}{if}(tmp->\hyperlink{class_node_a34452c0684d3cb1590406ad201b43e65}{right}!= 0)
+56             \hyperlink{class_student_handler_a9caee269c1ef9b34af2eeb0452a0cabb}{inorder}(tmp->\hyperlink{class_node_a34452c0684d3cb1590406ad201b43e65}{right});
+57     \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_student_handler_a9caee269c1ef9b34af2eeb0452a0cabb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_student_handler_a61f541e2aa02759a3213a9bceecf125c}\label{class_student_handler_a61f541e2aa02759a3213a9bceecf125c}} 
+\index{Student\+Handler@{Student\+Handler}!inorder\+File@{inorder\+File}}
+\index{inorder\+File@{inorder\+File}!Student\+Handler@{Student\+Handler}}
+\subsubsection{\texorpdfstring{inorder\+File()}{inorderFile()}}
+{\footnotesize\ttfamily void Student\+Handler\+::inorder\+File (\begin{DoxyParamCaption}\item[{const \hyperlink{class_node}{Node}$<$ \hyperlink{classstudent}{student} $>$ $\ast$}]{tmp,  }\item[{std\+::ofstream \&}]{ou\+File\+Student }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+function to traverse binary tree of the list of the students inorder and write in file 
+\begin{DoxyParams}{Parameters}
+{\em tmp} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 67 of file Student\+Handler.\+cpp.
+
+
+\begin{DoxyCode}
+67                                                                                      \{
+68         \textcolor{keywordflow}{if}(tmp->\hyperlink{class_node_abb08a8b3137dd8fc8874348a439e01b4}{left}!= 0)
+69             \hyperlink{class_student_handler_a61f541e2aa02759a3213a9bceecf125c}{inorderFile}(tmp->\hyperlink{class_node_abb08a8b3137dd8fc8874348a439e01b4}{left}, \hyperlink{_library_mananagement_system_8cpp_a2e073350989a922d101f00447e52dfc6}{ouFileStudent});
+70         std::string str;
+71         tmp->\hyperlink{class_node_a8b322cc3cc17b752eb77533493713ddd}{data}->\hyperlink{classstudent_a4bc363a59fc8b14d81e8e5e0d2326444}{createLine}(str);
+72         \hyperlink{_library_mananagement_system_8cpp_a2e073350989a922d101f00447e52dfc6}{ouFileStudent}<<str<<\textcolor{stringliteral}{"\(\backslash\)n"};
+73         \textcolor{keywordflow}{if}(tmp->\hyperlink{class_node_a34452c0684d3cb1590406ad201b43e65}{right}!= 0)
+74             \hyperlink{class_student_handler_a61f541e2aa02759a3213a9bceecf125c}{inorderFile}(tmp->\hyperlink{class_node_a34452c0684d3cb1590406ad201b43e65}{right}, \hyperlink{_library_mananagement_system_8cpp_a2e073350989a922d101f00447e52dfc6}{ouFileStudent});
+75     \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_student_handler_a61f541e2aa02759a3213a9bceecf125c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_student_handler_a61f541e2aa02759a3213a9bceecf125c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_student_handler_a08899a7b8ca38541605c564c572d72ef}\label{class_student_handler_a08899a7b8ca38541605c564c572d72ef}} 
+\index{Student\+Handler@{Student\+Handler}!print@{print}}
+\index{print@{print}!Student\+Handler@{Student\+Handler}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Student\+Handler\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+function to print the list of the students 
+
+Definition at line 58 of file Student\+Handler.\+cpp.
+
+
+\begin{DoxyCode}
+58                            \{
+59     \textcolor{keywordflow}{if}(\hyperlink{class_student_handler_a7141eccd57a30aa140e5b4e92b0939ea}{studentTree}->\hyperlink{class_binary_tree_a9ee0cf09781cf2ecc471aacc61848dde}{getRoot}() == 0)\{
+60         std::cout<<\textcolor{stringliteral}{"No student is added to the tree"};
+61     \}
+62     \textcolor{keywordflow}{else} \{
+63          \hyperlink{class_student_handler_a9caee269c1ef9b34af2eeb0452a0cabb}{inorder}(\hyperlink{class_student_handler_a7141eccd57a30aa140e5b4e92b0939ea}{studentTree}->\hyperlink{class_binary_tree_a9ee0cf09781cf2ecc471aacc61848dde}{getRoot}());
+64     \}
+65 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{class_student_handler_a08899a7b8ca38541605c564c572d72ef_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_student_handler_a08899a7b8ca38541605c564c572d72ef_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_student_handler_a8049bb821d2a0a951600ab79c6ee4e27}\label{class_student_handler_a8049bb821d2a0a951600ab79c6ee4e27}} 
+\index{Student\+Handler@{Student\+Handler}!print\+File@{print\+File}}
+\index{print\+File@{print\+File}!Student\+Handler@{Student\+Handler}}
+\subsubsection{\texorpdfstring{print\+File()}{printFile()}}
+{\footnotesize\ttfamily void Student\+Handler\+::print\+File (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{ou\+File\+Student }\end{DoxyParamCaption})}
+
+function to print the list of the students to the file 
+
+Definition at line 76 of file Student\+Handler.\+cpp.
+
+
+\begin{DoxyCode}
+76                                                          \{
+77     \textcolor{keywordflow}{if}(\hyperlink{class_student_handler_a7141eccd57a30aa140e5b4e92b0939ea}{studentTree}->\hyperlink{class_binary_tree_a9ee0cf09781cf2ecc471aacc61848dde}{getRoot}() == 0)\{
+78         std::cout<<\textcolor{stringliteral}{"No student is added to the tree"};
+79     \}
+80     \textcolor{keywordflow}{else} \{
+81         \hyperlink{class_student_handler_a61f541e2aa02759a3213a9bceecf125c}{inorderFile}(\hyperlink{class_student_handler_a7141eccd57a30aa140e5b4e92b0939ea}{studentTree}->\hyperlink{class_binary_tree_a9ee0cf09781cf2ecc471aacc61848dde}{getRoot}(),
+      \hyperlink{_library_mananagement_system_8cpp_a2e073350989a922d101f00447e52dfc6}{ouFileStudent});
+82     \}
+83 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_student_handler_a8049bb821d2a0a951600ab79c6ee4e27_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_student_handler_a8049bb821d2a0a951600ab79c6ee4e27_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_student_handler_a7141eccd57a30aa140e5b4e92b0939ea}\label{class_student_handler_a7141eccd57a30aa140e5b4e92b0939ea}} 
+\index{Student\+Handler@{Student\+Handler}!student\+Tree@{student\+Tree}}
+\index{student\+Tree@{student\+Tree}!Student\+Handler@{Student\+Handler}}
+\subsubsection{\texorpdfstring{student\+Tree}{studentTree}}
+{\footnotesize\ttfamily \hyperlink{class_binary_tree}{Binary\+Tree}$<$\hyperlink{classstudent}{student}$>$$\ast$ Student\+Handler\+::student\+Tree\hspace{0.3cm}{\ttfamily [private]}}
+
+list of the students is kept in a queue 
+
+Definition at line 59 of file Student\+Handler.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_student_handler_8h}{Student\+Handler.\+h}\item 
+src/\hyperlink{_student_handler_8cpp}{Student\+Handler.\+cpp}\end{DoxyCompactItemize}
